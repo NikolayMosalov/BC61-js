@@ -1,0 +1,180 @@
+/* common */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  font: 1.2em / 1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* components */
+
+.task-title {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0px 40px;
+}
+
+.module-title {
+  text-align: center;
+}
+
+/* accordion */
+.accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: none;
+}
+.accordion-list-item {
+  position: relative;
+  transition: all 500ms linear;
+}
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+.panel {
+  background-color: white;
+  display: none;
+  padding: 20px;
+  overflow: hidden;
+}
+.panel.active {
+  display: block;
+}
+
+/* pagination */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #eee;
+  margin-top: 1em;
+  padding-top: 0.5em;
+  list-style: none;
+}
+
+.pagination__item {
+  display: block;
+  margin: 0 0.25rem;
+  padding: 0.5em 1em;
+  border: 1px solid #999;
+  border-radius: 0.5em;
+  font-weight: 900;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pagination__item.active {
+  background-color: #bfff48;
+  color: #000000;
+}
+
+/* todos */
+
+.todos-form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.todos-input {
+  background-color: #40444b;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  flex-grow: 1;
+  font-size: 16px;
+  height: 36px;
+  margin-right: 10px;
+  padding: 8px;
+}
+
+.todos-btn {
+  background-color: #7289da;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  height: 36px;
+  padding: 8px 16px;
+  transition: background-color 0.3s;
+}
+
+.todos-btn:hover {
+  background-color: #677bc4;
+}
+
+.todos-item {
+  align-items: center;
+  background-color: #40444b;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding: 8px;
+}
+
+.todos-item span {
+  color: #ffffff;
+}
+
+.todos-item:last-child {
+  margin-bottom: 0;
+}
+
+.todos-btn-delete {
+  background-color: #f04747;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  height: 36px;
+  padding: 8px 16px;
+  transition: background-color 0.3s;
+  margin-right: 8px;
+}
+
+.todos-btn-delete:hover {
+  background-color: #d03c3c;
+}
