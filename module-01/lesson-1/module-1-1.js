@@ -110,31 +110,53 @@
 
 // console.log(isAdult);
 
-//! 
+//!
 // console.log('true:>> ', !true);
 
 // console.log("" || null || undefined);
 // console.log(true && "0" && "10");
 
-// console.log(true && 3); // 
-// console.log(false && 3); // 
-// console.log(true && 4 && 'kiwi'); // 
-// console.log(true && 0 && 'kiwi'); // 
-// console.log(true || 3); // 
-// console.log(true || 3 || 4); // 
-// console.log(true || false || 7); // 
-// console.log(null || 2 || undefined); // 
-// console.log((1 && null && 2) > 0); // 
+// console.log(true && 3); //
+// console.log(false && 3); //
+// console.log(true && 4 && 'kiwi'); //
+// console.log(true && 0 && 'kiwi'); //
+// console.log(true || 3); //
+// console.log(true || 3 || 4); //
+// console.log(true || false || 7); //
+// console.log(null || 2 || undefined); //
+// console.log((1 && null && 2) > 0); //
 // console.log(null || (2 && 3) || 4); //
 
-// console.log(2 + 5 + ' ' + 1 + 0); 
+// console.log(2 + 5 + ' ' + 1 + 0);
 // console.log('' + 1 - '1');
 
-// console.log(true + false); 
-// console.log(6 / '3'); 
-// console.log('2' * '3'); 
-// console.log(4 + 5 + 'px'); 
-// console.log('$' + 4 + 5); 
-// console.log('4' - 2); 
+// console.log(true + false);
+// console.log(6 / '3');
+// console.log('2' * '3');
+// console.log(4 + 5 + 'px');
+// console.log('$' + 4 + 5);
+// console.log('4' - 2);
 
 //  console.log('4px' - 2);
+
+//! Number - тип данних
+
+// const firstNumber = 5;
+// const secondNumber = 10;
+// console.log(firstNumber - secondNumber);
+// console.log(firstNumber + secondNumber);
+// console.log(firstNumber * secondNumber);
+// console.log(firstNumber / secondNumber);
+
+// const number = '21';
+// console.log(number % 2 === 0);
+// console.log(Number(number)); // 21
+// console.log(+number); // 21
+
+// const number = "1.23";
+// console.log(Math.ceil(number)); // 1.23 => 2
+// console.log(Math.round(number)); // 1.23 =>1 до ближчого цілого числа
+// console.log(Math.floor(number)); // 1.23 => 1
+// console.log(number.toFixed()); // 1.23 => '1'
+// console.log(parseFloat(number)); // 1.23 => 1.23 бачить після крапки
+// console.log(parseInt(number)); // 1.23 => 1 не бачить після крапки
