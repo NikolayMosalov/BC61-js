@@ -7,8 +7,8 @@
 //const str = 'abcde';
 //if (str.startsWith('a'))
 //{
- // console.log('yes');
-  //}
+// console.log('yes');
+//}
 //else {
 //  console.log('no');
 //}
@@ -20,11 +20,11 @@
 //if (min >= 0 && min <= 15) {
 //  console.log("first part")
 //} else if (min > 15 && min <= 30) {
- // console.log("second part")
+// console.log("second part")
 //} else if (min > 30 && min <= 45) {
- // console.log("third part")
+// console.log("third part")
 //} else if (min > 45 && min <= 60) {
- // console.log(" fourth part")
+// console.log(" fourth part")
 //}
 //else {
 //  console.log("wrong part")
@@ -35,7 +35,6 @@
 // const min = prompt('Enter min number')
 // const max = prompt('Enter max number')
 
-
 // if (isNaN(min) || isNaN(max)) {
 //   console.log('Будь ласка, введіть числа.');
 // } else if (min >= max) {
@@ -45,15 +44,12 @@
 //   console.log(`Випадкове число в діапазоні від мінімального до максимального : ${randomNumber}`);
 // }
 
-
-
 //* Тернарний оператор
 //TODO:============task-04=========================
 // Перевірити, чи є введене користувачем число парним чи непарним, і вивести відповідне повідомлення. Використай promt і виведи повідомлення в alert. (використати тернарний оператор)
 
 // const number = prompt("Enter number:");
 // number % 2 === 0 ? alert("Even") : alert("Odd");
-
 
 //TODO:============task-05=========================
 // Перепишіть if..else на тернарний оператор, за допомогою декількох операторів '?'.
@@ -102,9 +98,6 @@
 //   index += 1;
 // }
 
-
-
-
 //TODO:============task-08=========================
 //  Дано число n = 1000.
 //  Ділить його на 2 стільки разів, поки результат поділу не стане менше 50.
@@ -114,8 +107,8 @@
 // let n = 1000;
 // let counter = 0;
 // while (n > 50 ) {
- 
-//   counter += 1; 
+
+//   counter += 1;
 //   n /= 2;
 // }
 // console.log(`Кількість ітерацій: ${counter}. Чило після ділення: ${n}`);
@@ -135,20 +128,43 @@
 // числа від max до min за спаданням
 // Додайте усі парні числа від min до max
 
-const min = 1;
-const max = 10;
-let result = 0;
-for (let i = max; i >= min; i -= 1) {
-  if (i % 2 !== 0) {
-    continue
-  } 
-  result += i;
-  console.log('even:', i);
-}
-console.log(result);
+// const min = 1;
+// const max = 10;
+// let result = 0;
+// for (let i = max; i >= min; i -= 1) {
+//   if (i % 2 !== 0) {
+//     continue
+//   }
+//   result += i;
+//   console.log('even:', i);
+// }
+// console.log(result);
 
 //* Конструкція switch
 //TODO:============task-11=========================
 // Змінна num може набувати 4 значення: 1, 2, 3 або 4. Якщо вона має
 // значення '1', то у змінну result запишемо 'зима', якщо має значення
 // '2' - 'весна' і так далі. Розв'яжіть завдання через switch-case.
+
+// const num = 6;
+// switch (num) {
+//   case 1:
+//     console.log("winter");
+//     break;
+
+//   case 2:
+//     console.log("spring");
+//     break;
+
+//   case 3:
+//     console.log("summer");
+//     break;
+
+//   case 4:
+//     console.log("autumn");
+//     break;
+
+//   default:
+//     console.log('wrong');
+//     break;
+// }
