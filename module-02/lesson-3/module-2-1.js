@@ -19,7 +19,8 @@
 // console.log(styles);
 
 // const newArray = ['Рок', 'Поп'];
-// const resultArray = styles.concat(newArray);
+// const newArray1 = ['Фонк'];
+// const resultArray = styles.concat(newArray, newArray1);
 // console.log(resultArray);
 
 //TODO:=========task-1=================
