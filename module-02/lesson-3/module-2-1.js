@@ -28,6 +28,14 @@
 
 // const str = 'JavaScript, HTML, CSS, React';
 
+// const strArray = str.split(', ')
+
+// for (const item of strArray) {
+// console.log(item);
+// }
+
+
+
 //TODO:=========task-2=================
 // Знайти кількість слів у рядку, використовуючи методи масивів та цикл for...of.
 
