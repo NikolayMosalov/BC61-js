@@ -5,6 +5,23 @@
 // Видалить перший елемент масиву і виведіть його в консоль.
 // Вставте «Реп» і «Реггі» на початок масиву.
 
+// const styles = ['Джаз', 'Блюз'];
+// styles.push('Рок-н-рол');
+// const index = styles.indexOf('Блюз');
+// styles[index] = 'Класика';
+// styles.shift();
+// styles.unshift('Реп', 'Реггі');
+// console.log(styles.includes('Класика') && styles.includes('Реп'));
+
+// const i = styles.indexOf('Класика');
+// styles.splice(i, 1);
+// console.log(i);
+// console.log(styles);
+
+// const newArray = ['Рок', 'Поп'];
+// const resultArray = styles.concat(newArray);
+// console.log(resultArray);
+
 //TODO:=========task-1=================
 //Перетворити рядок, що містить слова, розділені комами, в масив слів і вивести кожне слово в окремому рядку.
 
