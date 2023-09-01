@@ -40,7 +40,14 @@
 // Знайти кількість слів у рядку, використовуючи методи масивів та цикл for...of.
 
 // const message = 'JavaScript is a popular programming language.';
-
+// const words = message.split(' ');
+//                       const total = words.length;
+// let total = 0;
+// for (const word of words) {
+// total += 1  
+// }
+//  console.log(total);
+// 
 //TODO:=========task-3=================
 // Об'єднати масив слів в рядок, розділений комами та пробілами.
 
