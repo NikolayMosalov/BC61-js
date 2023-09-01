@@ -34,8 +34,6 @@
 // console.log(item);
 // }
 
-
-
 //TODO:=========task-2=================
 // Знайти кількість слів у рядку, використовуючи методи масивів та цикл for...of.
 
@@ -44,23 +42,31 @@
 //                       const total = words.length;
 // let total = 0;
 // for (const word of words) {
-// total += 1  
+// total += 1
 // }
 //  console.log(total);
-// 
+//
 //TODO:=========task-3=================
 // Об'єднати масив слів в рядок, розділений комами та пробілами.
 
 // const words = ['JavaScript', 'HTML', 'CSS', 'React'];
+// const str = words.join(', ')
+// console.log(str);
 
 //TODO:=========task-4=================
 // Знайти всі елементи масиву, що містять задану підстроку, та об'єднати їх у новий масив, після чого вивести у консоль лог повідомлення "Масив елементів, що містять підстроку substring: ..." .Результат повинен бути розділений комами та пробілами.(використати indexOf)
 
-// const arr = ['JavaScript', 'HTML', 'CSS', 'React'];
-
-// const substring = 'S';
+// const arr = ["JavaScript", "HTML", "CSS", "React"];
+// const substring = "S";
+// // console.log(arr[1].indexOf(substring));
 // const filteredArr = [];
-
+// for (const item of arr) {
+//   if (item.indexOf(substring) !== -1) {
+//     filteredArr.push(item);
+//   }
+// }
+// console.log(filteredArr);
+// const joinedArray = filteredArr.join(', ');
 // console.log(
 //   `Масив елементів, що містять підстроку ${substring} : ${joinedArray}`
 // );
