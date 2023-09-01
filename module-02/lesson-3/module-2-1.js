@@ -76,6 +76,31 @@
 
 // const arr = ['JavaScript', 'HTML', 'CSS'];
 // const elem = 'SS';
+// const index = arr.indexOf(elem);
+
+// let found = false;
+
+// for (let index = 0; index < arr.length; index += 1) {
+//   if (arr[index] === elem) {
+//     arr.splice(index, 1);
+//     found = true;
+//     break;   }
+// }
+
+// if (!found) {
+//   arr.push(elem); }
+
+// console.log(arr);
+
+
+
+// const index = arr.indexOf(elem);
+// index === -1 ? arr.push(elem) : arr.splice(index, 1);
+
+// arr.includes(elem) ? arr.splice(arr.indexOf(elem), 1) :  arr.push(elem);
+
+
+// console.log(arr);
 
 //TODO:=========task-6=================
 //Напиши функцію findSmallerNumber(numbers)
