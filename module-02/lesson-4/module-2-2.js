@@ -66,19 +66,34 @@
 // function sumArr(numbers) {
 //     let newArr = [];
 //     for (i = 0; i < numbers.length - 1; i +=1 ) {
-//         newArr.push(numbers[i]+numbers[i + 1]) 
+//         newArr.push(numbers[i]+numbers[i + 1])
 //     }
 //     return newArr;
 
 // }
 // console.log(sumArr(someArr));
 //TODO:=========task-05=================
-//Напишіть функцію caclculateAverage()
+//Напишіть функцію calculateAverage()
 //яка приймає довільну кількість
 //аргументів і повертає їхнє середнє значення.
 //Додати перевірку, що аргументи це числа.
 
-// console.log(calculateAverage(10, 10, 20, 200));
+// function calculateAverage() {
+
+//     const args = arguments;
+//     let total = 0;
+//     let counter = 0;
+//     for (const arg of args) {
+//         if (typeof arg !== 'number') {
+//             continue;
+//         }
+//         total += arg;
+//         counter += 1;
+//     }
+//     return total / counter;
+// }
+
+// console.log(calculateAverage(10, '10', 20, 200, 10));
 
 //TODO:============task-06==============
 // Знайти перший парний елемент масиву, який більший за 10, використовуючи цикл for з оператором break та continue.
