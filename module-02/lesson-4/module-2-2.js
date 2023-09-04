@@ -120,4 +120,15 @@
 
 // const str = 'This is a new line';
 
+
+// function countVowels(string) {
+//     let counter = 0;
+//     const vowels = ['a', 'e', 'i', 'o', 'u'];
+//     for (const letter of string) {
+//         counter += vowels.includes(letter) ? 1 : 0;
+//         // console.log(letter);
+//     }
+//     return `This string consist ${counter} vowels`;
+// }
+
 // console.log(countVowels(str));
