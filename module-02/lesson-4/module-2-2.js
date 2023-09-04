@@ -5,31 +5,43 @@
 //яка шукає найменше число в масиві.
 //Додай перевірку що функція отримує масив
 
-const numbers = [2, 5, 35, 56, 12, 1, 24, 7, 80, 3];
-
-function findSmallerNumber(arr) {
-    
-    if (!Array.isArray(arr)) {
-        return console.log( 'not array')
-    }
-
-    let min = arr[0];
-
-    for (const number of arr) {
-        if (number < min) {
-            min = number;
-        }
-    }
-    return min;
-}
-
-console.log(findSmallerNumber(numbers));
-
+// const numbers = [2, 5, 35, 56, 12, 1, 24, 7, 80, 3];
+// 
+// function findSmallerNumber(arr) {
+    // 
+    // if (!Array.isArray(arr)) {
+        // return console.log( 'not array')
+    // }
+// 
+    // let min = arr[0];
+// 
+    // for (const number of arr) {
+        // if (number < min) {
+            // min = number;
+        // }
+    // }
+    // return min;
+// }
+// 
+// console.log(findSmallerNumber(numbers));
+// 
 //TODO:============task-02==============
 // Напишіть функцію min(a, b), яка повертає
 // менше з чисел a, b
 // Потрібно додати перевірку, що функція отримує числа
-
+// function min(a, b) {
+    // if (typeof a !== "number" || typeof b !== "number") {
+        // return console.log("not a number")
+    // }
+    // if (a < b) {
+        // return a
+    // }
+    // return b
+// return a < b ? a : b
+// }
+// const result = min(16, 2);
+// console.log(result);
+// 
 //TODO:============task-03==============
 //Напишіть функцію logItems(array), яка приймає
 //масив та використовує цикл for, який для кожного
