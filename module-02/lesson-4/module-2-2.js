@@ -98,6 +98,19 @@
 //TODO:============task-06==============
 // Знайти перший парний елемент масиву, який більший за 10, використовуючи цикл for з оператором break та continue.
 
+// function getOddNumbers(numbers) {
+//     let result = null;
+//     for(let i = 0; i < numbers.length; i += 1 ) {
+//         if(numbers[i] <= 10 || numbers[i] %2 !== 0) {
+//             continue;
+//         }
+//     result = `First even element ${numbers[i]}`
+//         break 
+//     }
+//     const message = result === null ? 'Even elements not found' : result;
+//     return message;
+// }
+
 // const numbers = [5, 11, 21, 8, 7, 15, 11, 11];
 
 // console.log(getOddNumbers(numbers));
