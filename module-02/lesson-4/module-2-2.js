@@ -63,6 +63,15 @@
 
 // const someArr = [22, 11, 34, 5, 12, 13, 14, 15];
 
+// function sumArr(numbers) {
+//     let newArr = [];
+//     for (i = 0; i < numbers.length - 1; i +=1 ) {
+//         newArr.push(numbers[i]+numbers[i + 1]) 
+//     }
+//     return newArr;
+
+// }
+// console.log(sumArr(someArr));
 //TODO:=========task-05=================
 //Напишіть функцію caclculateAverage()
 //яка приймає довільну кількість
