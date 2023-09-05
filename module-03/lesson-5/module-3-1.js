@@ -93,11 +93,11 @@
 // Якщо об'єкт має такий ключ - поверне true
 // Є 2 варіанти рішення, спочатку напишемо функцію, потім вирішимо простим способом
 
-const obj = {
-  name: 'Igor',
-  car: 'Mercedes',
-  carColor: 'black',
-};
+// const obj = {
+//   name: 'Igor',
+//   car: 'Mercedes',
+//   carColor: 'black',
+// };
 
 
 // ? Варіант 1
@@ -130,6 +130,17 @@ const obj = {
 //   Poly: 160,
 //   Ajax: 1470,
 // };
+
+// function totalSalery(object) {
+//     let sum = 0;
+//     const obj = Object.values(object);
+//     for (let i of obj) {
+//         sum += i;
+//     }
+//     return sum;
+// }
+
+// console.log(totalSalery(salaries));
 
 //TODO:============task-7======================================================
 // Напишіть функцію, яка приймає як параметр об'єкт
