@@ -93,15 +93,28 @@
 // Якщо об'єкт має такий ключ - поверне true
 // Є 2 варіанти рішення, спочатку напишемо функцію, потім вирішимо простим способом
 
-// const obj = {
-//   name: 'Igor',
-//   car: 'Mercedes',
-//   carColor: 'black',
-// };
+const obj = {
+  name: 'Igor',
+  car: 'Mercedes',
+  carColor: 'black',
+};
+
 
 // ? Варіант 1
+// function getBool(object, key) {
+//     const keys = Object.keys(object);
+
+//     return keys.includes(key);
+// }
+
 
 // ? Варіант 2
+// function getBool(object, key) {
+//     return key in object;
+
+// }
+
+
 
 // console.log(getBool(obj, 'car')); // true
 
