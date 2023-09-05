@@ -1,6 +1,7 @@
 //!  Літерал об'єкта
 //!  Властвості та методи об'єкта
 //!  this в методах об'єкта при зверненні до властивостей
+
 //TODO:============task-1=========================
 // Створіть об'єкт "людина" з властивостями "ім'я", "хобі" і "вік". Напишіть метод "greet", який буде виводити на екран привітання з ім'ям людини.
 // Послідовно:
@@ -8,15 +9,43 @@
 // 2 замінити hobby на 'skydiving'
 
 // Створити обьект human
+// const human = {
+//     userName: "Bobbi",
+//     hobby: "reading",
+//     age: 30,
+//     greet(){
+//         console.log(this.userName);
+//     },
+// }
 
-// Додати поле mood зі значенням 'happy'
+// // Додати поле mood зі значенням 'happy'
+// human["mood"] = "happy";
+// human.mood = "sad";
 
-// Замінити hobby на 'skydiving'
+// // Замінити hobby на 'skydiving'
+// human["hobby"] = "skydiving";
+// console.log(human.greet());
+// // ! this
+// console.log(this);
 
-// ! this
+// const Yuriy = Object.create(human);
+// Yuriy.userName = "Yuriy";
+// console.log(Yuriy.greet());
+// console.log(human.greet());
 
 //TODO:============task-2==============================================
-// Створіть об'єкт "прямокутник" з властивостями "довжина" та "ширина". Напишіть метод "calculateArea", який буде обчислювати площу прямокутника на основі його довжини та ширини.
+// Створіть об'єкт "прямокутник" з властивостями "довжина" та "ширина". 
+//Напишіть метод "calculateArea", який буде обчислювати площу прямокутника на основі його довжини 
+//та ширини.
+
+// const square = {
+//     width: 23,
+//     height: 43,
+
+//     calculateArea(){
+//         return this.width * this.height;
+//     }
+// }
 
 // console.log(square.calculateArea());
 
