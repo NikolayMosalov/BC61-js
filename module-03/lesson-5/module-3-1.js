@@ -152,9 +152,15 @@
 //   age: 20,
 //   hobby: 'tenis',
 //   haveCar: true,
-//   merried: false,
+//     merried: false,
+  
 // };
 
+// function showObjData(object) {
+//         console.log(Object.entries(object));
+//     }
+
+// showObjData(user);
 //TODO:============task-8======================================================
 // Створіть функцію multiplyNumeric(obj),
 // яка множить всі числові властивості об'єкта obj на 2.
@@ -163,8 +169,17 @@
 // let menu = {
 //   width: 200,
 //   height: 300,
-//   title: 'My menu',
+//     title: 'My menu',
 // };
+
+// function multiplyNumeric(obj) {
+//     for (const key in obj) {
+//         if (obj.hasOwnProperty(key) && typeof obj[key] === 'number') {
+//             obj[key] *= 2;
+//         }
+//     }
+//     return obj;
+// }
 
 // console.log(multiplyNumeric(menu));
 
