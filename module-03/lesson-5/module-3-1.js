@@ -52,7 +52,21 @@
 //TODO:============task-3==============================================
 // Створіть об'єкт "магазин" зі списком товарів. Напишіть метод "hasProduct", який буде перевіряти, чи є певний товар в наявності на складі магазину.
 
-// console.log(store.hasProduct('apple'));
+// const store = {
+//     products: ['banana', 'kiwi', 'apple'],
+
+//     hasProduct(productName) {
+//         return this.products.includes(productName);
+//     },
+//     addProduct(newProduct) {
+//         this.products.push(newProduct);
+//         console.log(this.products);
+//     }
+
+// }
+// store.addProduct('orange');
+
+// console.log(store.hasProduct('orange'));
 
 //TODO:============task-4==============================================
 // 4. Створіть об'єкт "кошик" зі списком товарів та їх цін. Напишіть метод "calculateTotal", який буде обчислювати загальну суму товарів у кошику.
