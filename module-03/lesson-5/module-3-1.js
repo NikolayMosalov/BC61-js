@@ -234,5 +234,17 @@
 //   { title: '1984', author: 'Джордж Оруелл', year: 1949 },
 // ];
 
-// const arr = findBooksByAuthor(books, 'Джоан Роулінг');
+// const arr = findBooksByAuthor(books, 'Джордж Оруелл');
+
+// function findBooksByAuthor(arr, author) {
+//     const newArr = [];
+//     for (const book of arr) {
+//         if (author === book.author) {
+//             newArr.push(book); 
+
+//         }
+        
+//     }
+//     return newArr;
+// }
 // console.log(arr);
