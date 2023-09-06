@@ -58,48 +58,71 @@
 // Функція повинна повернути об'єкт, що містить ці властивості. Якщо якась властивість не передається як параметр, то вона повинна мати значення за замовчуванням. Наприклад, якщо age не передається, то його значення за замовчуванням повинно бути 18.
 
 // Крім того, якщо передається додаткова властивість, яку не передбачено в списку, то вона повинна бути проігнорована.
-function createPerson(obj = {}) {
-    const { firstName, lastName, age = 18, gender, occupation} = obj;
-    return { firstName, lastName, age, gender, occupation };
-}
+// function createPerson(obj = {}) {
+//     const { firstName, lastName, age = 18, gender, occupation} = obj;
+//     return { firstName, lastName, age, gender, occupation };
+// }
  
 
 
 
 // Приклади виклику функції та їх очікувані результати:
-const person1 = createPerson({
-  firstName: 'John',
-  lastName: 'Doe',
-  age: 25,
-  gender: 'male',
-  occupation: 'developer',
-});
+// const person1 = createPerson({
+//   firstName: 'John',
+//   lastName: 'Doe',
+//   age: 25,
+//   gender: 'male',
+//   occupation: 'developer',
+// });
 // console.log(person1);
 // Очікуваний результат: { firstName: 'John', lastName: 'Doe', age: 25, gender: 'male', occupation: 'developer' }
 
-const person2 = createPerson({
-  firstName: 'Jane',
-  lastName: 'Doe',
-  gender: 'female',
-});
+// const person2 = createPerson({
+//   firstName: 'Jane',
+//   lastName: 'Doe',
+//   gender: 'female',
+// });
 // console.log(person2);
 // Очікуваний результат: { firstName: 'Jane', lastName: 'Doe', age: 18, gender: 'female', occupation: undefined }
 
-const person3 = createPerson({
-  firstName: 'Bob',
-  lastName: 'Smith',
-  age: 30,
-  gender: 'male',
-  occupation: 'teacher',
-  hobby: 'reading',
-});
-console.log(person3);
+// const person3 = createPerson({
+//   firstName: 'Bob',
+//   lastName: 'Smith',
+//   age: 30,
+//   gender: 'male',
+//   occupation: 'teacher',
+//   hobby: 'reading',
+// });
+// console.log(person3);
 
 // Очікуваний результат: { firstName: 'Bob', lastName: 'Smith', age: 30, gender: 'male', occupation: 'teacher' }
 
 //! Деструктуризація масивів
 // TODO:=========task-4==============
 // Потрібно перебрати об'єкти та вивести ім'я кращого співробітника
+
+// function findBestEmployee(obj) {
+//   const bestEmployee = Math.max(...Object.values(obj));
+//   const besEmployees = [];
+//   for (const employee of Object.keys(obj)) {
+//     if (obj[employee] === bestEmployee) {
+//       besEmployees.push(employee);
+//     }
+//   }
+//   return besEmployees.join(', ');
+// }
+
+// function findBestEmployee(obj) {
+//   let bestEmployee = '';
+//   let bestEmployeesTask = 0;
+//   for (const [employee, tasks] of Object.entries(obj)) {
+//     if (tasks > bestEmployeesTask) {
+//       bestEmployeesTask = tasks;
+//       bestEmployee = employee;
+//     }
+//   }
+//   return bestEmployee;
+// }
 
 // console.log(
 //   findBestEmployee({
@@ -131,14 +154,15 @@ console.log(person3);
 // TODO:=========task-5==============
 // Перепеши функцію використовуючи Паттерн «Об'єкт параметрів».
 
-// const logFunction = function (
-//   firstName,
-//   lastName,
-//   age,
-//   gender,
-//   userEmail,
-//   userPhoneNumber
-// ) {
+
+
+// const logFunction = function (obj) {
+//   const { firstName,
+//     lastName,
+//     age,
+//     gender,
+//     userEmail,
+//     userPhoneNumber } = obj;
 //   console.log(firstName, lastName, age, gender, userEmail, userPhoneNumber);
 // };
 
@@ -151,4 +175,11 @@ console.log(person3);
 //   '(096) 35-21-476'
 // );
 
-// logFunction()
+// logFunction({
+//   firstName: 'Amelia',
+//   lastName: 'Burgess',
+//   age: 30,
+//   gender: 'female',
+//   userEmail: 'apjez@eh.aq',
+//   userPhoneNumber: '(096) 35-21-476',
+// });
