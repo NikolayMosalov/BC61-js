@@ -11,12 +11,23 @@
 // ];
 
 // const arr2 = [
-//   { id: 2, name: 'Mary' },
+//   { id: 2, name: 'Mary1' },
 //   { id: 4, name: 'Jane' },
 //   { id: 5, name: 'Tom' },
 // ];
 
+// function uniq(array1, array2) {
+//     const union = [...array1, ...array2];
+//     const newObject = {};
+//     for (const item of union) {
+//         newObject[item.id] = item;
+//     }
+//     return Object.values(newObject);
+// }
+
 // console.log(uniq(arr1, arr2));
+
+
 
 //TODO:============task-2=========================
 // Напишіть функцію updateObject, яка приймає об'єкт та повертає
