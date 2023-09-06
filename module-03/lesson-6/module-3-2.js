@@ -58,35 +58,42 @@
 // Функція повинна повернути об'єкт, що містить ці властивості. Якщо якась властивість не передається як параметр, то вона повинна мати значення за замовчуванням. Наприклад, якщо age не передається, то його значення за замовчуванням повинно бути 18.
 
 // Крім того, якщо передається додаткова властивість, яку не передбачено в списку, то вона повинна бути проігнорована.
+function createPerson(obj = {}) {
+    const { firstName, lastName, age = 18, gender, occupation} = obj;
+    return { firstName, lastName, age, gender, occupation };
+}
+ 
+
+
 
 // Приклади виклику функції та їх очікувані результати:
-// const person1 = createPerson({
-//   firstName: 'John',
-//   lastName: 'Doe',
-//   age: 25,
-//   gender: 'male',
-//   occupation: 'developer',
-// });
+const person1 = createPerson({
+  firstName: 'John',
+  lastName: 'Doe',
+  age: 25,
+  gender: 'male',
+  occupation: 'developer',
+});
 // console.log(person1);
 // Очікуваний результат: { firstName: 'John', lastName: 'Doe', age: 25, gender: 'male', occupation: 'developer' }
 
-// const person2 = createPerson({
-//   firstName: 'Jane',
-//   lastName: 'Doe',
-//   gender: 'female',
-// });
+const person2 = createPerson({
+  firstName: 'Jane',
+  lastName: 'Doe',
+  gender: 'female',
+});
 // console.log(person2);
 // Очікуваний результат: { firstName: 'Jane', lastName: 'Doe', age: 18, gender: 'female', occupation: undefined }
 
-// const person3 = createPerson({
-//   firstName: 'Bob',
-//   lastName: 'Smith',
-//   age: 30,
-//   gender: 'male',
-//   occupation: 'teacher',
-//   hobby: 'reading',
-// });
-// console.log(person3);
+const person3 = createPerson({
+  firstName: 'Bob',
+  lastName: 'Smith',
+  age: 30,
+  gender: 'male',
+  occupation: 'teacher',
+  hobby: 'reading',
+});
+console.log(person3);
 
 // Очікуваний результат: { firstName: 'Bob', lastName: 'Smith', age: 30, gender: 'male', occupation: 'teacher' }
 
