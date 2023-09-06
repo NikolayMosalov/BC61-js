@@ -33,8 +33,17 @@
 // Напишіть функцію updateObject, яка приймає об'єкт та повертає
 // новий об'єкт без зазначених параметрів
 // Очікуваний результат ({a: 1, b: 2, c: 3}, 'b', 'a') => {c: 3}
+// function updateObject(obj, ...toDelete) {
+//     const newObj = {...obj};
+//     for(const key of toDelete) {
+//         delete newObj[key];
+//     }
+//     return newObj;
+//     console.log(toDelete);
+// }
 
-// console.logs(updateObject({ a: 1, b: 2, c: 3 }, 'b', 'a')); // {c: 3}
+
+// console.log(updateObject({ a: 1, b: 2, c: 3 }, 'b', 'a')); // {c: 3}
 
 //! Деструктуризація об'єктів
 //TODO:============task-3=================================================================
