@@ -290,10 +290,18 @@ const filmoteka = [
 
 //TODO:==========================
 // Напишіть функцію findFilmByName(films, filmTitle), яка шукає фільм за назвою.
+// function findFilmByName(films, filmTitle) {
+//     const newArr = [];
+//     for (const film of films) {
+//         if (film.title === filmTitle) {
+//             newArr.push(film) ;
+//         }
+//     }
+//     return newArr;
+// }
+// //* Оцікуваний результат -  Обьект фільма
 
-//* Оцікуваний результат -  Обьект фільма
-
-// const result = findFilmByName(filmoteka, 'Luca');
+// const result = findFilmByName(filmoteka, 'Venom');
 // console.log(result);
 
 //TODO:==========================
