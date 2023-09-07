@@ -102,6 +102,16 @@
 //   { name: 'Яблука', price: 128, quantity: 5 },
 // ];
 
+// function calculateTotalPrice(array) {
+//     let total = 0;
+//     for (const {price, quantity} of array) {
+//          total += price * quantity;
+        
+//     }
+//     return total;
+// }
+
+
 // const sum1 = calculateTotalPrice(store1);
 // const sum2 = calculateTotalPrice(store2);
 // const sum3 = calculateTotalPrice(store3);
