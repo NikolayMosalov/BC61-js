@@ -1,4 +1,3 @@
-
 //TODO:=========task-1=================
 // Перевірити два масиву і дізнатися, чи вони рівні
 
@@ -6,7 +5,6 @@
 
 // const arr1 = [1, 4, 6, 'color', 324, 232, 'list', 11, 9, 'dream', 34, 0, -30];
 // const arr2 = [6, 'dream', -30, 11, 9, 1, 324, 34, 'color', 4, 232, 0, 'list'];
-
 
 // const arr3 = [4, 232, 6, -30, 'color', 324, 'list', 1, 11, 9, 'dream', 34, 0];
 // const arr4 = ['color', 6, -30, 11, 9, 1, 'dream', 324, 34, 4, 232, 0, 'list'];
@@ -23,18 +21,15 @@
 //     return false;
 //     }
 
-    
-    
 //    for (const i of arr1) {
 //     if (!arr2.includes(i)) {
 //         return false;
 //     }
 //     }
-    
+
 //     return true;
 
 // }
-
 
 // console.log(compareArrays(arr1, arr2));
 // console.log(compareArrays(arr3, arr4));
@@ -65,7 +60,7 @@
 //                     !newArray.includes(item) && newArray.push(item);
 //                     continue
 //                 }
-//             } 
+//             }
 //         }
 
 //     }
@@ -106,11 +101,10 @@
 //     let total = 0;
 //     for (const {price, quantity} of array) {
 //          total += price * quantity;
-        
+
 //     }
 //     return total;
 // }
-
 
 // const sum1 = calculateTotalPrice(store1);
 // const sum2 = calculateTotalPrice(store2);
@@ -123,8 +117,8 @@
 // console.log('store3=>', sum3);
 
 //TODO:============task-4=====================================
-//* Задача: є масив об'єктів, кожен об'єкт містить інформацію про певний товар: назву товару, його ціну та кількість.
-//* Необхідно вивести інформацію про ті товари, ціна яких менше 50 гривень та кількість більше 5 одиниць.
+// * Задача: є масив об'єктів, кожен об'єкт містить інформацію про певний товар: назву товару, його ціну та кількість.
+// * Необхідно вивести інформацію про ті товари, ціна яких менше 50 гривень та кількість більше 5 одиниць.
 
 // const basket = {
 //   products: [
@@ -134,8 +128,22 @@
 //     { name: 'product 4', price: 50, quantity: 3 },
 //     { name: 'product 5', price: 60, quantity: 2 },
 //   ],
+//   getProductsByPrice(maxPrice, minQuantity) {
+//     const newArr = [];
 
-// const result = basket.getProductsByPrice(40, 6);
+//     for (const item of this.products) {
+//       const { price, quantity } = item;
+
+//       if (price < maxPrice && quantity > minQuantity) {
+//         newArr.push(item);
+//       }
+//     }
+
+//     return newArr;
+//   },
+// };
+
+// const result = basket.getProductsByPrice(50, 5);
 // console.log(result);
 
 //TODO:============task-5===================================
