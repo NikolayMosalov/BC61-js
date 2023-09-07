@@ -154,32 +154,48 @@
 // const academia = {
 //   students: [
 //     {
-//       name: 'John',
-//       surname: 'Doe',
+//       name: "John",
+//       surname: "Doe",
 //       birthYear: 2000,
-//       courses: ['Math', 'Physics'],
+//       courses: ["Math", "Physics"],
 //     },
 //     {
-//       name: 'Jane',
-//       surname: 'Doe',
+//       name: "Jane",
+//       surname: "Doe",
 //       birthYear: 2001,
-//       courses: ['Chemistry', 'Biology'],
+//       courses: ["Chemistry", "Biology"],
 //     },
 //     {
-//       name: 'Bob',
-//       surname: 'Smith',
+//       name: "Bob",
+//       surname: "Smith",
 //       birthYear: 2002,
-//       courses: ['Math', 'Art'],
+//       courses: ["Math", "Art"],
 //     },
 //     {
-//       name: 'Alice',
-//       surname: 'Johnson',
+//       name: "Alice",
+//       surname: "Johnson",
 //       birthYear: 2003,
-//       courses: ['Physics', 'Chemistry'],
+//       courses: ["Physics", "Chemistry"],
 //     },
 //   ],
+//   getStudentsByCourses(arr) {
+//     const newArr = [];
+//     for (let i = 0; i < this.students.length; i += 1) {
+//       for (let j = 0; j < this.students[i].courses.length; j += 1) {
+//         if (arr.includes(this.students[i].courses[j])) {
+//           newArr.push({
+//             name: this.students[i].name,
+//             surname: this.students[i].surname,
+//           });
+//           break;
+//         }
+//       }
+//     }
+//     return newArr;
+//   },
+// };
 
-// const result = academia.getStudentsByCourses(['Math', 'Art']);
+// const result = academia.getStudentsByCourses(["Math", "Physics"]);
 // console.log(result);
 
 //TODO:=========task-6=============Робота з базою данних================
