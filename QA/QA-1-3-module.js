@@ -51,6 +51,26 @@
 //   48, 1, 5, 25, 22, 10, 44, 102, 100, 22, 53, 6, 3, 10, 45, 12, 0, 22, 13, 22,
 //   45, 55, 33, 23, 5, 21, 2, 44, 1,
 // ];
+// function findDuplicate(array) {
+//     let newArray = [];
+
+//     for(let i = 0; i < array.length; i += 1) {
+//       const dublicate = array[i];
+//       let count = 0;
+//         for(let j = i; j < array.length; j +=1)  {
+//             const item = array[j];
+//             if(item === dublicate) {
+//                 count += 1;
+//                 if(count === 2) {
+//                     !newArray.includes(item) && newArray.push(item);
+//                     continue
+//                 }
+//             } 
+//         }
+
+//     }
+//     return newArray;
+// }
 
 // const result = findDuplicate(array);
 // console.log(result);
