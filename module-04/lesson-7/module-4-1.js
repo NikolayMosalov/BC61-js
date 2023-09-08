@@ -78,7 +78,18 @@
 
 // const numbers = [3, 5, 6, 34, 8, 83, 12, 34];
 
-// const result = each(array, (value) => value * 2);
+// function each(array, callback) {
+//     let newArray = [];
+
+//     array.forEach(number => {
+//         newArray.push(callback(number));
+//     });
+
+//     return newArray;
+// }
+
+
+// const result = each(numbers, (value) => value * 2);
 // console.log(result);
 
 //TODO:============task-05=========================
