@@ -54,7 +54,18 @@
 //showProduct(product) - коллбек приймаючий об'єкт
 //продукту і логірующий їх у консоль
 
-// makeProduct('Молоко', 22.5, showProduct);
+// function makeProduct(name, price, callback) {
+//     const id = Date.now();
+//     const product = {
+//         id,
+//         name,
+//         price,
+//     }
+//     callback(product);
+// }
+// const showProduct = ({id, name, price}) => console.log(`id: ${id}, product: ${name}, price: ${price}`);
+   
+// makeProduct('beer', 45, showProduct);
 
 //TODO:============task-04=========================
 //Напишіть функцію each(array, callback), яка
