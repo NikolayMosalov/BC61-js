@@ -94,19 +94,19 @@
 //TODO:============task-05=========================
 // Напишіть функцію, яка приймає масив чисел і колбек-функцію. Функція повинна повернути новий масив, у якому кожен елемент масиву перетворено згідно з логікою, яка визначається в колбек-функції. Колбек-функція приймає число, і повертає його ж, помножене на рандомне число від 1 до цього числа.
 
-const numbers = [1, 2, 3, 4, 5];
-function transformArray(array, callback) {
-  const newArray = [];
-  array.forEach((element) => {
-    newArray.push(callback(element));
-  });
-  return newArray;
-}
-function transformedNumbers(num) {
-  return Math.floor(Math.random() * num) + 1;
-}
-const result = transformArray(numbers, transformedNumbers);
-console.log(result);
+// const numbers = [1, 2, 3, 4, 5];
+// function transformArray(array, callback) {
+//   const newArray = [];
+//   array.forEach((element) => {
+//     newArray.push(callback(element));
+//   });
+//   return newArray;
+// }
+// function transformedNumbers(num) {
+//   return Math.floor(Math.random() * num) + 1;
+// }
+// const result = transformArray(numbers, transformedNumbers);
+// console.log(result);
 
 //TODO:============task-06=========================
 // Напишіть функцію, яка приймає масив і колбек-функцію. Функція повинна повернути перший елемент масиву,
