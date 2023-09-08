@@ -7,21 +7,41 @@
 //Реалізуй перевірку, що prompt не порожній
 
 // function letMeSeeYourName(callback) {
-    // const name = prompt("Enter your name");
-    // if ( name === ""  ){
-        // alert("Errow")
-    // }
-    // callback(name)
+// const name = prompt("Enter your name");
+// if ( name === ""  ){
+// alert("Errow")
+// }
+// callback(name)
 // }
 // function greet(name) {
-    // console.log(`Hallo ${name}`);
-// } 
+// console.log(`Hallo ${name}`);
+// }
 // letMeSeeYourName(greet);
 
 //TODO:============task-02=========================
 // Напишіть функцію, яка приймає два числа і колбек-функцію. Функція повинна помножити числа між собою та передати результат дії до колбек-функції. Колбек-функція повинна, у разі, якщо, це число є парним - помножити це число на себе, якщо ні - взяти квадратний корінь з цього числа, та вивести результат у консоль лог.
 
-// const result = performOperation(20, 40, callbackFunction);
+// function performOperation(a, b, callback) {
+//   callback(a * b);
+// }
+// function callbackFunction(number) {
+//   if (number % 2 === 0) {
+//     return console.log(Math.pow(number, 2));
+//   }
+//   return console.log(Math.sqrt(number));
+// }
+
+// const result = performOperation(3, 5, callbackFunction);
+// console.log(result);
+
+//? =========== Стрілочна функція ============
+
+// const performOperation = (a, b, callback) => callback(a * b);
+
+// const callbackFunction = (number) =>
+//   number % 2 === 0 ? Math.pow(number, 2) : Math.sqrt(number);
+
+// const result = console.log(performOperation(3, 5, callbackFunction));
 // console.log(result);
 
 //TODO:============task-03=========================
