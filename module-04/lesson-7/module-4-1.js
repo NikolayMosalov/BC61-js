@@ -94,19 +94,19 @@
 //TODO:============task-05=========================
 // Напишіть функцію, яка приймає масив чисел і колбек-функцію. Функція повинна повернути новий масив, у якому кожен елемент масиву перетворено згідно з логікою, яка визначається в колбек-функції. Колбек-функція приймає число, і повертає його ж, помножене на рандомне число від 1 до цього числа.
 
-const numbers = [1, 2, 3, 4, 5];
-function transformArray(array, callback) {
-  const newArray = [];
-  array.forEach((element) => {
-    newArray.push(callback(element));
-  });
-  return newArray;
-}
-function transformedNumbers(num) {
-  return Math.floor(Math.random() * num) + 1;
-}
-const result = transformArray(numbers, transformedNumbers);
-console.log(result);
+// const numbers = [1, 2, 3, 4, 5];
+// function transformArray(array, callback) {
+//   const newArray = [];
+//   array.forEach((element) => {
+//     newArray.push(callback(element));
+//   });
+//   return newArray;
+// }
+// function transformedNumbers(num) {
+//   return Math.floor(Math.random() * num) + 1;
+// }
+// const result = transformArray(numbers, transformedNumbers);
+// console.log(result);
 
 //TODO:============task-06=========================
 // Напишіть функцію, яка приймає масив і колбек-функцію. Функція повинна повернути перший елемент масиву,
@@ -115,10 +115,33 @@ console.log(result);
 // повертатись перше парне число. При використанні другого - має повертатись перше слово у масиві, що починається з літери
 // "O" у будь - якому реєстрі.
 
-// const numbers = [1, 3, 5, 7, 9, 20];
+// const numbers = [1, 3, 6, 7, 9, 20];
 // const words = ['apple', 'banana', 'orange', 'pear'];
 
 //! Зауважте, що використання методу forEach не дозволяє прямо вийти з циклу після знаходження першого підходящого елемента. Тому ми використовуємо додаткову змінну result, щоб зберегти перший підходящий елемент та перевіряти, чи він вже був знайдений. forEach нічого не повертає, а просто перебирає масив!
+
+// function findElement(arr, callback) {
+  
+//   let result = null;
+
+//   arr.forEach(element =>  {
+//     if (callback(element) && result === null) {
+//       result = element;
+//     }
+    
+//   });
+
+//   return result;
+
+// }
+
+// const isEven = (number) => number % 2 === 0;
+  
+
+
+// const startsWithO = (word ) => word.toLowerCase().startsWith('o');
+
+
 
 // const res1 = findElement(numbers, isEven);
 // console.log(res1);
