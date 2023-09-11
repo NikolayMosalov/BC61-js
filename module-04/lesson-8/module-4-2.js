@@ -48,7 +48,6 @@
 
 // const numbers = [2, 1, 6, 8, 9, 10, 12];
 
-
 // const oddNumberInArray = (array) => array.find(number => number % 2 !== 0);
 // console.log('numbers: ', numbers);
 // console.log('oddNumber: ', oddNumberInArray(numbers));
@@ -114,7 +113,17 @@
 //TODO:=========task-11=================
 // Дано масив чисел [1, 2, 3, 4, 5]. Застосуйте метод reduce для обчислення суми елементів масиву
 
-// const numbsers = [1, 2, 3, 4, 5];
+// const numbers = [1, 2, 3, 4, 5];
+
+// const sum = (arr) => arr.reduce((acc, number) => (acc += number), 0);
+
+// const sum = (arr) =>
+//   arr.reduce((acc, number) => {
+//     acc.push(number * 2);
+//     return acc;
+//   }, []);
+
+// const sum = (arr) => arr.map((number) => number * 2);
 
 // const res = sum(numbers);
 // console.log(res);
@@ -122,7 +131,19 @@
 //TODO:=========task-12=================
 // У вас є масив чисел, і вам потрібно знайти середнє значення цих чисел. Напишіть функцію, яка приймає масив чисел і повертає середнє значення.
 
-// const arr = [1, 2, 3, 4, 5];
+const arr = [1, 2, 3, 4, 5];
+
+// // const averageValue = (arr) =>
+// //   arr.reduce((acc, number, idx, array) => {
+// //     acc += number;
+// //     if (idx === array.length - 1) {
+// //       return acc / array.length;
+// //     }
+// //     return acc;
+// //   }, 0);
+
+// const averageValue = (arr) =>
+//   arr.reduce((acc, number) => acc + number / arr.length, 0);
 
 // const res = averageValue(arr);
 // console.log(res);
