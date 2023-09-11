@@ -1,8 +1,10 @@
 //TODO:=========task-01=================
 // Дано масив чисел [1, 2, 3, 4, 5]. Створіть новий масив, що містить квадрати кожного елементу вхідного масиву. Очікуваний результат: [1, 4, 9, 16, 25].
+// const getNewArray = (arr, pow) => arr.map((el) => Math.pow(el, pow));
 
-// const res = getNewArray([1, 2, 3], 5);
-// console.log('getNewArray :>> ', res);
+// const res = getNewArray([1, 2, 3, 4, 5], 2);
+
+// console.log("getNewArray :>> ", res);
 
 //TODO:=========task-02=================
 // Дано масив об'єктів {id: 1, values: [1, 2, 3]}, {id: 2, values: [4, 5, 6]}, {id: 3, values: [7, 8, 9]}. Створіть новий масив, що містить всі значення з масивів values кожного об'єкту, збережених в одному масиві. Очікуваний результат: [1, 2, 3, 4, 5, 6, 7, 8, 9].
@@ -12,6 +14,7 @@
 //   { id: 2, values: [4, 5, 6] },
 //   { id: 3, values: [7, 8, 9] },
 // ];
+// const flatArray = (arr) => arr.flatMap(({ values }) => values);
 
 // const res = flatArray(data);
 // console.log(res);
