@@ -48,15 +48,19 @@
 
 // const numbers = [2, 1, 6, 8, 9, 10, 12];
 
+
+// const oddNumberInArray = (array) => array.find(number => number % 2 !== 0);
 // console.log('numbers: ', numbers);
-// console.log('oddNumber: ', oddNumberInArray);
+// console.log('oddNumber: ', oddNumberInArray(numbers));
 
 //TODO:=========task-06=================
 // Дано масив чисел [1, 2, 3, 4, 5]. Знайдіть перший елемент, більший за 3. Очікуваний результат: 4.
 
 // const arr = [1, 2, 3, 4, 5];
 
-// const res = getNumber(arr, 3);
+// const getNumber = (array, value) => array.find(number => number > value);
+
+// const res = getNumber(arr, 1);
 // console.log('object :>> ', res);
 
 //! sort
