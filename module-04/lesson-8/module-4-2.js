@@ -28,15 +28,20 @@
 //   { name: 'Bob', age: 19 },
 // ];
 
+// const checkAge = (array) => array.some(({ age }) => age < 20);
+
 // const res = checkAge(people);
 // console.log(res);
 
 //TODO:=========task-04=================
 //  Дано масив чисел [2, 4, 6, 8, 10]. Перевірте, чи є кожен елемент масиву парним. Очікуваний результат: true.
 
+// const checkEvenArray = (array) => array.every(number => number % 2 === 0);
+
 // const numbers = [2, 4, 6, 8, 10];
 
-// const res = s
+// const res = checkEvenArray(numbers);
+// console.log(res);
 
 //TODO:=========task-05=================
 // Знайдіть перше непарне число
