@@ -66,20 +66,20 @@
 //! sort
 //TODO:=========task-07=================
 // Відсортуйте масив чисел [4, 2, 5, 1, 3] у порядку зростання. Очікуваний результат: [1, 2, 3, 4, 5].
-
+// const sortedArray = (array) => [...array].sort((a, b) => a - b);
 // const numbersArray = [4, 2, 5, 1, 3];
-
+// 
 // const res = sortedArray(numbersArray);
 // console.log(res);
-
+// console.log(numbersArray);
 //TODO:===============task-08===============================
 // Відсортуйте масив рядків ["banana", "orange", "apple", "pear"] у порядку алфавіту. Очікуваний результат: ["apple", "banana", "orange", "pear"].
-
-// const strisngArray = ['banana', 'orange', 'apple', 'pear'];
+// const sortedArray = (array) => [...array].sort((a, b) => b.localeCompare(a));
+// const stringArray = ['banana', 'orange', 'apple', 'pear'];
 
 // const res = sortedArray(stringArray);
 // console.log(res);
-
+// 
 //TODO:===============task-09===============================
 //  Відсортуйте масив об'єктів {name: "John", age: 27}, {name: "Jane", age: 31}, {name: "Bob", age: 19} за віком у порядку зростання. Очікуваний результат: [{name: "Bob", age: 19}, {name: "John", age: 27}, {name: "Jane", age: 31}].
 
