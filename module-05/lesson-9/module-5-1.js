@@ -15,7 +15,7 @@
 //     modify(params, value){
 //         if(params !== "userName" && params !== "lastName"){
 //             return alert("Params are not valid");
-//         } 
+//         }
         
 //         if(value[0] === value[0].toUpperCase() && value.length >= 3){
 //            return this[params] = value;
@@ -27,13 +27,67 @@
 // user.showUser();
 
 //TODO:=========task-02=================
-// Для обьекта "user", написати метод для зміни ім'я або прізвища(змінити можна лише якесь з цих полів, змінювати або додавати нові 
+// Для обьекта "user", написати метод для зміни ім'я або прізвища(змінити можна лише якесь з цих полів, змінювати або додавати нові
 //потрібно заборонити) з перевіркою на валідність даних(Перша літера має бути у верхньому реєстрі, довжина слова не менше 3 літер)
 
 
 
 //TODO:=========task-03=================
 // Створити глобальну функцію для обьекта "user", що може додавати властивості об'єкту, в контексті якого вона буде викликана. Додати цю функцію як метод об'єкта user, та додати за допомогою неї властивість friends із значенням:
+
+
+
+const user = {
+    userName: "Tom",
+    lastName: "Ford",
+    age: 34,
+    email: "tom@gmail.com",
+
+    showUser(){
+        console.log(this)
+    },
+
+    modify(params, value){
+        if(params !== "userName" && params !== "lastName"){
+            return alert("Params are not valid");
+        }
+        
+        if(value[0] === value[0].toUpperCase() && value.length >= 3){
+           return this[params] = value;
+        }
+        alert("Value are not valid!")
+    }, 
+    
+};
+
+const addProperty = function (key, value) {
+    this[key] = value;
+}
+  
+
+user.addProperty = addProperty;
+user.addProperty('friends', [
+  {
+    firstName: 'Mary',
+    lastName: 'Smith',
+    age: 32,
+    email: 'marysmith@hotmail.com',
+  },
+  {
+    firstName: 'Alex',
+    lastName: 'Johnson',
+    age: 45,
+    email: 'alex.johnson@yahoo.com',
+  },
+  {
+    firstName: 'Emily',
+    lastName: 'Davis',
+    age: 19,
+    email: 'emilydavis@gmail.com',
+  },
+]);
+user.addProperty("mood", "happy")
+console.log(user);
 
 //TODO:=========task-04=================
 //  Викликати метод user.info() таким чином, щоб він вивів результатом  ({name: 'Bob', lactName: 'Lasso',age: 50, email: 'BodLasso@gmail.com'})
