@@ -81,6 +81,13 @@ user.showUser.call(obj);
 //TODO:=========task-05=================
 //  Викличте функцію showFullName у контексті об'єкта user
 
+function showFullName(message, number) {
+  console.log(`${message}, ${this.userName} ${this.lastName}, ${number}`);
+}
+
+showFullName.call(user, 'Hello', 10);
+showFullName.apply(obj, ['Hello', 20]);
+
 //TODO:=========task-06=================
 // Виправте помилки, щоб код працював
 
@@ -96,6 +103,19 @@ user.showUser.call(obj);
 //   callback();
 // }
 
-// callAction(product.showPrice);
-
+// callAction(product.showPrice.bind(product));
 //? answer
+
+const product = {
+  price: 5000,
+
+  showPrice() {
+    console.log(this.price);
+  },
+};
+
+function callAction(callback, contecst) {
+  callback.call(contecst);
+}
+
+callAction(product.showPrice, product);
