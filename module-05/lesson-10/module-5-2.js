@@ -76,12 +76,43 @@
  *
  * Оголоси приватні властивості #login #email, доступ до яких зроби через геттер та сеттер login email
  */
+// class Client {
+// #login;
+// #email;
+  // 
+// constructor(login, email) {
+    // this.#login = login;
+    // this.#email = email;
+  // }
+// 
+  // get getLogin() {
+  // console.log(this.#login)
+  // }
+// 
+  // set changeLogin(newLogin) {
+    // this.#login = newLogin;
+  // }
+// 
+  // get getEmail() {
+// console.log(this.#email)
+  // }
+  // 
+  //  set changeEmail(newEmail) {
+  //  this.#email = newEmail;
+//  }
+// }
+// 
+// const client = new Client("Mango", "mango@gmail.com")
+// 
+// client.login = 12343;
+// console.log(client);
+
 
 // client.changeEmail = 'mango555@gmail.com';
-// console.log(client.getClientData.email);
+// console.log(client.getEmail);
 // client.changeLogin = '12345';
-// console.log(client.getClientData.login);
-
+// console.log(client.getLogin);
+// 
 //! Статичний метод
 //TODO:=========task-04=================
 /**
