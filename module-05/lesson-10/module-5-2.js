@@ -25,11 +25,11 @@
 //     return this.result;
 //   }
 
-//   add(num) { 
+//   add(num) {
 //     this.result += num;
 //     return this;
 //   }
-  
+
 //   substruct(num) {
 //     this.result -= num;
 //     return this;
@@ -48,7 +48,7 @@
 
 // const calculator = new Calculator();
 // console.log(calculator);
- 
+
 // const res = calculator
 //   .number(10)
 //   .add(10)
@@ -79,40 +79,39 @@
 // class Client {
 // #login;
 // #email;
-  // 
+//
 // constructor(login, email) {
-    // this.#login = login;
-    // this.#email = email;
-  // }
-// 
-  // get getLogin() {
-  // console.log(this.#login)
-  // }
-// 
-  // set changeLogin(newLogin) {
-    // this.#login = newLogin;
-  // }
-// 
-  // get getEmail() {
+// this.#login = login;
+// this.#email = email;
+// }
+//
+// get getLogin() {
+// console.log(this.#login)
+// }
+//
+// set changeLogin(newLogin) {
+// this.#login = newLogin;
+// }
+//
+// get getEmail() {
 // console.log(this.#email)
-  // }
-  // 
-  //  set changeEmail(newEmail) {
-  //  this.#email = newEmail;
+// }
+//
+//  set changeEmail(newEmail) {
+//  this.#email = newEmail;
 //  }
 // }
-// 
+//
 // const client = new Client("Mango", "mango@gmail.com")
-// 
+//
 // client.login = 12343;
 // console.log(client);
-
 
 // client.changeEmail = 'mango555@gmail.com';
 // console.log(client.getEmail);
 // client.changeLogin = '12345';
 // console.log(client.getLogin);
-// 
+//
 //! Статичний метод
 //TODO:=========task-04=================
 /**
@@ -132,7 +131,7 @@
 //       LOW: "low",
 //       HIGHT: "hight",
 //     };
-//   }; 
+//   };
 
 //   constructor() {
 //     this.items = [];
@@ -186,6 +185,52 @@
   | ##### Крім того, клас `Person` має мати метод `getDetails()`, який повертає об'єкт з ім'ям, віком, статтю та електронною поштою людини.
   |============================
 */
+// class Person {
+//   constructor(name, age, gender, email) {
+//     this.name = name;
+//     this.age = age;
+//     this.gender = gender;
+//     this.email = email;
+//   }
+
+//   getDetails() {
+//     return {
+//       name: this.name,
+//       age: this.age,
+//       gender: this.gender,
+//       email: this.email,
+//     };
+//   }
+// }
+
+// const person = new Person("John", 30, "male", "john@hmail.com");
+
+// console.log(person.getDetails());
+
+// class Employee extends Person {
+//   constructor(salary, department, name, age, gender, email) {
+//     super(name, age, gender, email);
+//     this.salary = salary;
+//     this.department = department;
+//   }
+
+//   getEmployeeDetails() {
+//     return {
+//       ...this.getDetails(),
+//       salary: this.salary,
+//       department: this.department,
+//     };
+//   }
+// }
+// const employee = new Employee(
+//   5000,
+//   "developer",
+//   "Bob",
+//   45,
+//   "male",
+//   "bob@hmail.com"
+// );
+// console.log(employee.getEmployeeDetails());
 
 /**
   |=============Employee===============
