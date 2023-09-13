@@ -125,16 +125,54 @@
  * - updatePriority(text, newPriority)
  */
 
-// note1.addNote({ text: 'Note1', priority: Notes.Priority().LOW });
-// note1.addNote({ text: 'Note2', priority: Notes.Priority().LOW });
+// class Notes {
+
+//   static Priority() {
+//     return {
+//       LOW: "low",
+//       HIGHT: "hight",
+//     };
+//   }; 
+
+//   constructor() {
+//     this.items = [];
+//   };
+
+//   addNote(note) {
+//     this.items.push(note);
+//     console.log(this.items);
+//   };
+
+//   removeNote(noteName) {
+//     const index = this.items.findIndex(({text}) => text === noteName);
+//     console.log(index);
+//     if (index !== -1) {
+//       this.items.splice(index, 1);
+//     console.log(this.items);
+//     }
+//   };
+
+//   updatePriority({ text, newPriority }) {
+//     const index = this.items.findIndex(item => item.text === text);
+//     if (index !== -1) {
+//       this.items[index].priority = newPriority;
+//     }
+//   };
+
+// }
+
+// const note1 = new Notes();
+// console.log(note1);
+// note1.addNote({ text: 'Купити хліб', priority: Notes.Priority().LOW });
+// note1.addNote({ text: 'Сходити на практику', priority: Notes.Priority().HIGHT });
 // console.table(note1.items);
 
-// note1.removeNote('Note1');
+// note1.removeNote('Купити хліб');
 // console.table(note1.items);
 
-// note1.updatePriority({ text: 'Note2', newPriority: Notes.Priority().HIGHT });
+// note1.updatePriority({ text: 'Сходити на практику', newPriority: Notes.Priority().LOW });
 // console.table(note1.items);
-
+// console.log(note1);
 //! Практика наслідування у класах.
 //TODO:=========task-05=================
 /**
