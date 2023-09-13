@@ -8,19 +8,60 @@
  * Об'єкт класу може проводити послідовні операції у вигляді ланцюжка
  */
 
+// class Calculator {
+
+//   constructor() {
+//     this.result = 0;
+//   }
+
+//   // result = 0;
+
+//   number(num) {
+//     this.result = num;
+//     return this;
+//   }
+
+//   getResult() {
+//     return this.result;
+//   }
+
+//   add(num) { 
+//     this.result += num;
+//     return this;
+//   }
+  
+//   substruct(num) {
+//     this.result -= num;
+//     return this;
+//   }
+
+//   divide(num) {
+//     this.result /= num;
+//     return this;
+//   }
+
+//   multiply(num) {
+//     this.result *= num;
+//     return this;
+//   }
+// }
+
+// const calculator = new Calculator();
+// console.log(calculator);
+ 
 // const res = calculator
 //   .number(10)
 //   .add(10)
 //   .divide(2)
 //   .multiply(4)
-//   .subtract(5)
+//   .substruct(5)
 //   .getResult();
 
 // console.log(res);
 
 // const res2 = calculator
 //   .number(20)
-//   .subtract(40)
+//   .substruct(40)
 //   .multiply(-8)
 //   .divide(160)
 //   .add(20)
