@@ -41,8 +41,17 @@
  * Это значит что она будет доступна функции makeDish через замыкание.
  */
 
-// chef1('beef wellington');
-// chef2('pasta carbonara');
+function makeСhef(chefName) {
+    return function makeDish(dish) {
+        console.log(`${chefName} is cooking ${dish}`);
+    }
+}
+const chef1 = makeСhef('Ramsy Gordon');
+const chef2 = makeСhef('Vasya')
+
+
+chef1('beef wellington');
+chef2('pasta carbonara');
 
 //TODO:====================task-03==========================
 // Напишіть функцію для зберігання знижки. Функція повертає:
