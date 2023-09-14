@@ -159,12 +159,18 @@
 
 // const concerts = {
 //   Київ: new Date('2020-04-01'),
-//   Умань: new Date('2023-08-02'),
+//   Умань: new Date('2023-10-02'),
 //   Вінниця: new Date('2020-04-21'),
-//   Одеса: new Date('2023-08-15'),
+//   Одеса: new Date('2023-10-15'),
 //   Хмельницький: new Date('2020-04-18'),
-//   Харків: new Date('2023-08-10'),
+//   Харків: new Date('2023-10-10'),
 // };
+
+// console.log(new Date('2020-04-01'));
+
+// const concertsToArray = (obj) => Object.keys(obj)
+//     .filter((city) => obj[city] > new Date())
+//     .sort((a, b) => obj[a] - obj[b]);
 
 // const res = concertsToArray(concerts);
 // console.log(res);
@@ -176,7 +182,7 @@
 
 //? Однак його виклик призводить до помилки. Чому?
 
-// const checkPassword = function (password) {
+// const checkPassword = function (ok, fail, password) {
 //   let ok = client.loginOk;
 //   let fail = client.loginFail;
 
@@ -195,7 +201,7 @@
 //   },
 // };
 
-// checkPassword('rockstar');
+// checkPassword(client.loginOk.bind(client), client.loginFail.bind(client), 'rockstar');
 
 //! class
 //TODO:=================task-09=============================
