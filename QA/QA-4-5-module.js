@@ -123,9 +123,32 @@
 // У кожному масиві якщо унікальний рядок, у якому не повторюються літери.
 // Знайдіть і виведіть цей рядок.
 
-// console.log(findUniq(['abc', 'acb', 'bac', 'foo', 'bca', 'cab', 'cba'])); // === 'foo'
+// const findUniq = (arr) =>
+//   arr.find((string, idx, array) => {
+//     const sortString = string
+//       .split("")
+//       .sort((a, b) => a.localeCompare(b))
+//       .join("");
+
+//     // console.log(array);
+
+//     return array.every(
+//       (el, index) =>
+//         index === idx || sortString !== el
+//             .split("")
+//             .sort((a, b) => a.localeCompare(b))
+//             .join("")
+//     );
+//   });
+
+// const stringArr = ["abc", "acb", "bac", "foo", "bca", "cab", "cba"]
+// const sortedStringArr = [...stringArr].sort((a,b) => b.localeCompare(a))
+// console.log(sortedStringArr);
+// console.log(stringArr);
+
+// console.log(findUniq(["abc", "acb", "bac", "foo", "bca", "cab", "cba"])); // === 'foo'
 // console.log(findUniq(['fghj', 'ghfj', 'abcd', 'jhgf', 'fghj', 'fgjh', 'ghjf'])); // === 'abcd'
-// console.log(findUniq(['qwe', 'camp', 'acmp', 'pmac', 'camp', 'apmc', 'pmac'])); // === 'qwe'
+// console.log(findUniq(["qwe", "camp", "acmp", "pmac", "camp", "apmc", "pmac"])); // === 'qwe'
 
 //TODO:===============task-07===============================
 // Даний словник із міст та дат виступів рок-групи
