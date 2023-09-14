@@ -14,7 +14,7 @@
 // }
 //     console.log(newArray);
 
-//     let result = 0; 
+//     let result = 0;
 //     for (const num of newArray) {
 //         if (num % 5 === 0) {
 //             result += callback2(num);;
@@ -49,7 +49,6 @@
 // const chef1 = makeСhef('Ramsy Gordon');
 // const chef2 = makeСhef('Vasya')
 
-
 // chef1('beef wellington');
 // chef2('pasta carbonara');
 
@@ -66,7 +65,7 @@
 
 // const silver = saveDiscount(5);
 // const gold = saveDiscount (15);
-// const premium = saveDiscount(20); 
+// const premium = saveDiscount(20);
 
 // console.log(silver);
 
@@ -92,7 +91,7 @@
 //         uniq[number] = number;
 //     }
 //     return Object.values(uniq);
-    
+
 // console.log(uniq);
 // }
 
@@ -110,10 +109,12 @@
 // Перевірте, чи є хоча б один об'єкт з віком менше 20 років. Очікуваний результат: true.
 
 // const people = [
-//   { name: 'John', age: 27 },
-//   { name: 'Jane', age: 31 },
-//   { name: 'Bob', age: 19 },
+//   { name: "John", age: 27 },
+//   { name: "Jane", age: 31 },
+//   { name: "Bob", age: 19 },
 // ];
+
+// const checkAge = (arr) => arr.some((el) => el.age < 20);
 
 // const res = checkAge(people);
 // console.log(res);
@@ -201,4 +202,3 @@
 
 // console.log(`Order for table ${order.tableNumber} - Total: $${total}`);
 // console.log(`Is paid: ${order.isPaid}`);
-
