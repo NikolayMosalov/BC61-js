@@ -7,6 +7,26 @@
 
 // const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
+// function manipulateArray(arr, callback1, callback2) {
+//     const newArray = [];
+//     for (const num of arr) {
+//         newArray.push(callback1(num));
+// }
+//     console.log(newArray);
+
+//     let result = 0; 
+//     for (const num of newArray) {
+//         if (num % 5 === 0) {
+//             result += callback2(num);;
+//         }
+//     }
+//     return result;
+// }
+
+// const multiplyByTwo = (num) => num * 2;
+
+// const divideByFiveAndSum = (num) => num / 5;
+
 // const result = manipulateArray(array, multiplyByTwo, divideByFiveAndSum);
 // console.log(result);
 
