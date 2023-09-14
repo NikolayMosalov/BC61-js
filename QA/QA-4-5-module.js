@@ -81,10 +81,29 @@
 //TODO:=================task-04=============================
 // Напиши функцію яка приймає масив чисел і повертає новий масив, унікальних чисел, які не повторюються.
 
-// const numbers = [1, 1, 1, 2, 3, 4, 7, 7, 6, 6, 5, 4, 23, 22, 22, 111, 1, 5];
+// const numbers = [10, 10, 10, 2, 'a', 4, 7, 7, 6, 6, 'B', 4, 23, 22, 22, 111, 10, 'a'];
 
+// const uniqArray = numbers.filter((number, idx, arr) => arr.indexOf(number) === idx);
+// console.log(uniqArray);
+
+// function uniqArray(array) {
+//     const uniq = {};
+//     for (const number of array) {
+//         uniq[number] = number;
+//     }
+//     return Object.values(uniq);
+    
+// console.log(uniq);
+// }
+
+// const uniqArray = array => [...new Set(array)];
+
+// const set = new Set(numbers);
+
+// console.log(set);
 // const res = uniqArray(numbers);
 // console.log(res);
+// console.log(numbers);
 
 //TODO:=================task-05=============================
 // Дано масив об'єктів {name: "John", age: 27}, {name: "Jane", age: 31}, {name: "Bob", age: 19}.
