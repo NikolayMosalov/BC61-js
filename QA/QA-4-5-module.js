@@ -41,25 +41,41 @@
  * Это значит что она будет доступна функции makeDish через замыкание.
  */
 
-function makeСhef(chefName) {
-    return function makeDish(dish) {
-        console.log(`${chefName} is cooking ${dish}`);
-    }
-}
-const chef1 = makeСhef('Ramsy Gordon');
-const chef2 = makeСhef('Vasya')
+// function makeСhef(chefName) {
+//     return function makeDish(dish) {
+//         console.log(`${chefName} is cooking ${dish}`);
+//     }
+// }
+// const chef1 = makeСhef('Ramsy Gordon');
+// const chef2 = makeСhef('Vasya')
 
 
-chef1('beef wellington');
-chef2('pasta carbonara');
+// chef1('beef wellington');
+// chef2('pasta carbonara');
 
 //TODO:====================task-03==========================
 // Напишіть функцію для зберігання знижки. Функція повертає:
 // Іншу функцію, яка приймає суму покупки
 // і повертає фінальну суму із збереженою знижкою.
 
-// const result = discountPremium(1000);
-// console.log(result);
+// function saveDiscount (discount){
+//     return function makeDiscount(sum){
+//         return sum - sum * (discount/100);
+//     }
+// }
+
+// const silver = saveDiscount(5);
+// const gold = saveDiscount (15);
+// const premium = saveDiscount(20); 
+
+// console.log(silver);
+
+// const user1 = silver(1000);
+// const user2 = gold(1000);
+// const user3 = premium(1000);
+// console.log(user1);
+// console.log(user2);
+// console.log(user3);
 
 //! Arrow method
 //TODO:=================task-04=============================
