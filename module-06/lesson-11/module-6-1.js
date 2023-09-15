@@ -94,6 +94,14 @@ const markup = `
 listEl.insertAdjacentHTML('beforeend', markup);
 //TODO:===========20===============
 listEl.innerHTML = '';
+
+
+
+
+
+
+
+
 //TODO:=========task-02=================
 /**
  * Вам надано кілька масивів з різними фруктами (назва у масиві вказує на те, куди потрібно помістити елементи відносно ul).
@@ -106,6 +114,21 @@ listEl.innerHTML = '';
 // const prependFruitList = ['grapes🍇', 'orange🍊'];
 // const beforeFruitList = ['strawberry🍓', 'cherry🍒'];
 // const afterFruitList = ['peach🍑', 'kiwi🥝'];
+
+// const elementsOfIngridients = (array) => {
+//   return array.map((el) => {
+//     const liEl = document.createElement("li");
+//     liEl.textContent = el;
+//      return liEl;
+//   });
+ 
+// }
+// console.log(elementsOfIngridients(appendFruitList))
+
+// listEl.append(...elementsOfIngridients(appendFruitList));
+// listEl.prepend(...elementsOfIngridients(prependFruitList));
+// listEl.before(...elementsOfIngridients(beforeFruitList));
+// listEl.after(...elementsOfIngridients(afterFruitList));
 
 //TODO:=========task-03=================
 // 3. Вставте даний текст в html документ, а потім виділіть усі слова, які мають більше 8 символів у тексті абзацу (наприклад, жовтим фоном).
