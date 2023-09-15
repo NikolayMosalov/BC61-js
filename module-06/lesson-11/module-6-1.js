@@ -133,11 +133,27 @@ listEl.innerHTML = '';
 //TODO:=========task-03=================
 // 3. Вставте даний текст в html документ, а потім виділіть усі слова, які мають більше 8 символів у тексті абзацу (наприклад, жовтим фоном).
 
-// const text = `Об'єктна модель документа (Document Object Model) - незалежний від мови інтерфейс для роботи з HTML-документом. Містить набір властивостей і методів, що дозволяють шукати, створювати і видаляти елементи, реагувати на дії користувача і багато іншого. Тобто з'єднує сторінку з мовою програмування.`;
+const text = `Об'єктна модель документа (Document Object Model) - незалежний від мови інтерфейс для роботи з HTML-документом. Містить набір властивостей і методів, що дозволяють шукати, створювати і видаляти елементи, реагувати на дії користувача і багато іншого. Тобто з'єднує сторінку з мовою програмування.`;
 
-// const paragraphEl = document.createElement('p');
 
-// const words = text.split(/\s+/); // Розбиваємо текст на слова за допомогою роздільників (пробіли, коми, крапки і т.д.)
+
+const words = text.split(/\s+/); // Розбиваємо текст на слова за допомогою роздільників (пробіли, коми, крапки і т.д.)
+const paragraphEl = document.createElement('p');
+
+words.forEach(word => {
+  if (word.length > 8) {
+    const spanEl = document.createElement('span');
+    spanEl.style.backgroundColor = 'yellow';
+    spanEl.textContent = word + ' ';
+    paragraphEl.appendChild(spanEl);
+  } else {
+    paragraphEl.innerHTML += word + ' ';
+  }
+});
+
+console.log(paragraphEl);
+
+listEl.after(paragraphEl);
 // console.log(words);
 
 //TODO:=========task-04=================
