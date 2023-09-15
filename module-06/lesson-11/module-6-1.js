@@ -21,31 +21,44 @@
 // 20 - очисти список
 
 //TODO:===========1===============
-
+const bodyElem =document.body;
+console.log(bodyElem);
 //TODO:===========2===============
-
+const titleEl = document.querySelector('#title');
+console.log(titleEl);
 //TODO:============3==============
-
+const listEl = document.querySelector('.list');
+console.log(listEl);
 //TODO:============4==============
-
+const itemsEl = document.querySelectorAll('[data-topic]');
+console.log([itemsEl]);
 //TODO:===========5===============
-
+const firstItemEl = document.querySelector('[data-topic]');
+console.log(firstItemEl);
 //TODO:===========6===============
-
+const lastItemEl = itemsEl[itemsEl.length-1];
+console.log(lastItemEl);
 //TODO:===========7===============
-
+const firstSibling = titleEl.nextElementSibling;
+console.log(firstSibling);
 //TODO:===========8===============
+const allTitles = document.querySelectorAll('h3');
+allTitles.forEach  (li => console.log(li));
+
 
 //TODO:===========9===============
-
+allTitles.forEach  (li => li.classList.add('active'));
 //TODO:===========10===============
-
+const navLiEl = document.querySelector('li[data-topic="navigation"]');
+console.log(navLiEl);
 //TODO:===========11===============
-
+navLiEl.style.backgroundColor = 'yellow';
 //TODO:===========12===============
-
+navLiEl.lastElementChild.textContent = 'Я змінив<span> тут текст</span>';
 //TODO:===========13===============
-
+const currentTopic = "manipulation";
+const topicEl = document.querySelector(`[data-topic=${currentTopic}]`);
+console.log(topicEl);
 //TODO:===========14===============
 
 //TODO:===========15===============
