@@ -21,38 +21,38 @@
 // 20 - очисти список
 
 //TODO:===========1===============
-const bodyElem =document.body;
+const bodyElem = document.body;
 console.log(bodyElem);
 //TODO:===========2===============
-const titleEl = document.querySelector('#title');
+const titleEl = document.querySelector("#title");
 console.log(titleEl);
 //TODO:============3==============
-const listEl = document.querySelector('.list');
+const listEl = document.querySelector(".list");
 console.log(listEl);
 //TODO:============4==============
-const itemsEl = document.querySelectorAll('[data-topic]');
+const itemsEl = document.querySelectorAll("[data-topic]");
 console.log([itemsEl]);
 //TODO:===========5===============
-const firstItemEl = document.querySelector('[data-topic]');
+const firstItemEl = document.querySelector("[data-topic]");
 console.log(firstItemEl);
 //TODO:===========6===============
-const lastItemEl = itemsEl[itemsEl.length-1];
+const lastItemEl = itemsEl[itemsEl.length - 1];
 console.log(lastItemEl);
 //TODO:===========7===============
 const firstSibling = titleEl.nextElementSibling;
 console.log(firstSibling);
 //TODO:===========8===============
-const allTitles = document.querySelectorAll('h3');
-allTitles.forEach  (li => console.log(li));
+const allTitles = document.querySelectorAll("h3");
+allTitles.forEach((li) => console.log(li));
 //TODO:===========9===============
-allTitles.forEach  (li => li.classList.add('active'));
+allTitles.forEach((li) => li.classList.add("active"));
 //TODO:===========10===============
 const navLiEl = document.querySelector('li[data-topic="navigation"]');
 console.log(navLiEl);
 //TODO:===========11===============
-navLiEl.style.backgroundColor = 'yellow';
+navLiEl.style.backgroundColor = "yellow";
 //TODO:===========12===============
-navLiEl.lastElementChild.textContent = 'Я змінив<span> тут текст</span>';
+navLiEl.lastElementChild.textContent = "Я змінив<span> тут текст</span>";
 //TODO:===========13===============
 const currentTopic = "manipulation";
 const topicEl = document.querySelector(`[data-topic=${currentTopic}]`);
@@ -60,14 +60,14 @@ console.log(topicEl);
 //TODO:===========14===============
 topicEl.style.backgroundColor = `blue`;
 //TODO:===========15===============
-const completedEl = document.querySelector('.completed');
+const completedEl = document.querySelector(".completed");
 console.log(completedEl);
 //TODO:===========16===============
-completedEl.parentNode.remove()
+completedEl.parentNode.remove();
 //TODO:===========17===============
-const parEl = document.createElement('p')
+const parEl = document.createElement("p");
 parEl.textContent = "Об'єктна модель документа (Document Object Model)";
-titleEl.after(parEl)
+titleEl.after(parEl);
 //TODO:===========18===============
 // const liEl = document.createElement('li');
 
@@ -91,16 +91,9 @@ const markup = `
 </li>
 `;
 // listEl.innerHTML = markup;
-listEl.insertAdjacentHTML('beforeend', markup);
+listEl.insertAdjacentHTML("beforeend", markup);
 //TODO:===========20===============
-listEl.innerHTML = '';
-
-
-
-
-
-
-
+listEl.innerHTML = "";
 
 //TODO:=========task-02=================
 /**
@@ -121,7 +114,7 @@ listEl.innerHTML = '';
 //     liEl.textContent = el;
 //      return liEl;
 //   });
- 
+
 // }
 // console.log(elementsOfIngridients(appendFruitList))
 
@@ -135,19 +128,17 @@ listEl.innerHTML = '';
 
 const text = `Об'єктна модель документа (Document Object Model) - незалежний від мови інтерфейс для роботи з HTML-документом. Містить набір властивостей і методів, що дозволяють шукати, створювати і видаляти елементи, реагувати на дії користувача і багато іншого. Тобто з'єднує сторінку з мовою програмування.`;
 
-
-
 const words = text.split(/\s+/); // Розбиваємо текст на слова за допомогою роздільників (пробіли, коми, крапки і т.д.)
-const paragraphEl = document.createElement('p');
+const paragraphEl = document.createElement("p");
 
-words.forEach(word => {
+words.forEach((word) => {
   if (word.length > 8) {
-    const spanEl = document.createElement('span');
-    spanEl.style.backgroundColor = 'yellow';
-    spanEl.textContent = word + ' ';
+    const spanEl = document.createElement("span");
+    spanEl.style.backgroundColor = "yellow";
+    spanEl.textContent = word + " ";
     paragraphEl.appendChild(spanEl);
   } else {
-    paragraphEl.innerHTML += word + ' ';
+    paragraphEl.innerHTML += word + " ";
   }
 });
 
@@ -159,9 +150,28 @@ listEl.after(paragraphEl);
 //TODO:=========task-04=================
 // Створіть контейнер div (з класом numberContainer )в HTML-документі та динамічно створіть 100 блоків (з класом number) наповнивши їх рандомними числами від 1 до 100 і додайте їх до контейнера div(numberContainer). Парні числа повинні мати зелений фон (додати клас even), Непарні числа - жовтий фон (додати клас odd).
 
-// const randomNumber = () => Math.floor(Math.random() * 100) + 1;
-// const BLOCKS = 100;
+const randomNumber = () => Math.floor(Math.random() * 100) + 1;
 
+const BLOCKS = 200;
+
+const divContainerEl = document.createElement("div");
+divContainerEl.classList.add("number-container");
+const divArray = [];
+
+for (let index = 0; index < BLOCKS; index += 1) {
+  const divEl = document.createElement("div");
+  divEl.classList.add("number");
+  divEl.textContent = randomNumber();
+  if (divEl.textContent % 2 === 0) {
+    divEl.classList.add("even");
+  } else {
+    divEl.classList.add("odd");
+  }
+  divArray.push(divEl);
+}
+divContainerEl.append(...divArray);
+document.querySelector(".film-list").before(divContainerEl);
+console.log(divContainerEl);
 // //TODO:=========task-05=================
 // Створи HTML список фільмів на основі масиву під назвою films. Користувач обожнює дивитися кіно, дивиться його часто, тому при вході на сторінку він хоче бачити, які фільми вже були переглянуті, а до яких він ще не добрався. Вперу чергу зарендери фільми на сторінку, використовуй допоміжну функцію createMarkup(), яка буде повертати розмітку. Додай розмітку на сторінку задопомогою insertAdjacentHTML() і тільки після цього зроби елементи фільмів (li), які вже були переглянуті напівпрозорими (opacity: 0.5). Для цього використовуй масив унікальних id фільмів, знайди на сторінці елементи у яких id дорівнює тому id фільма, який користувач вже перелянув аби саме їх зробити напівпрозорими.
 
