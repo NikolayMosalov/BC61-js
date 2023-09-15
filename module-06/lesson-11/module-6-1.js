@@ -44,8 +44,6 @@ console.log(firstSibling);
 //TODO:===========8===============
 const allTitles = document.querySelectorAll('h3');
 allTitles.forEach  (li => console.log(li));
-
-
 //TODO:===========9===============
 allTitles.forEach  (li => li.classList.add('active'));
 //TODO:===========10===============
@@ -60,19 +58,42 @@ const currentTopic = "manipulation";
 const topicEl = document.querySelector(`[data-topic=${currentTopic}]`);
 console.log(topicEl);
 //TODO:===========14===============
-
+topicEl.style.backgroundColor = `blue`;
 //TODO:===========15===============
-
+const completedEl = document.querySelector('.completed');
+console.log(completedEl);
 //TODO:===========16===============
-
+completedEl.parentNode.remove()
 //TODO:===========17===============
-
+const parEl = document.createElement('p')
+parEl.textContent = "Об'єктна модель документа (Document Object Model)";
+titleEl.after(parEl)
 //TODO:===========18===============
+// const liEl = document.createElement('li');
 
+// const subtitle = document.createElement('h3');
+// subtitle.textContent = "Властивість innerHTML";
+
+// const pEl = document.createElement('p');
+// pEl.textContent = "Ще один спосіб створити DOM-елементи і помістити їх в дерево - це використовувати рядки з тегами і дозволити браузеру зробити всю важку роботу";
+
+// liEl.appendChild(subtitle);
+// liEl.appendChild(pEl);
+
+// console.log(liEl);
+
+// listEl.append(liEl);
 //TODO:===========19===============
-
+const markup = `
+<li>
+  <h3>Властивість innerHTML</h3>
+  <p>Ще один спосіб створити DOM-елементи і помістити їх в дерево - це використовувати рядки з тегами і дозволити браузеру зробити всю важку роботу</p>
+</li>
+`;
+// listEl.innerHTML = markup;
+listEl.insertAdjacentHTML('beforeend', markup);
 //TODO:===========20===============
-
+listEl.innerHTML = '';
 //TODO:=========task-02=================
 /**
  * Вам надано кілька масивів з різними фруктами (назва у масиві вказує на те, куди потрібно помістити елементи відносно ul).
