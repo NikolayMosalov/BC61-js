@@ -98,8 +98,40 @@ const refs = {
 // Написати функцію, яка буде створювати список подій клавіатури event.key та event.code
 // Додати класи на список eventList, на елементи eventCode та eventKey
 
+// const container = document.querySelector('.eventThumb');
+
+
+// const onKeyDownPress = ({key, code}) => {
+//   const markUp = `
+//     <ul class="eventList">
+//       <li class="eventKey"><b>Key</b>: ${key}</li>
+//       <li class="eventCode"><b>Code</b>: ${code}</li>
+//     </ul>
+//   `; 
+//   container.insertAdjacentHTML('afterbegin', markUp);
+// }
+
+// document.addEventListener('keydown', onKeyDownPress);
 //TODO:=========task-04=================
 // Кнопка "Зменшити" робить квадрат меншим на 20 пікселів, кнопка "Збільшити" - робить більшим на 10 пікселів.
 
+// const btnIncrease = document.querySelector('.js-increase');
+// const btnDecrease = document.querySelector('.js-decrease');
+// const divElement = document.querySelector('.box')
+
+// const onClick = (event) => {
+//   // console.log(divElement.offsetWidth);
+//   const { offsetWidth } = divElement;
+//   if (event.target.id === "increase") {
+//     divElement.style.width = `${offsetWidth + 20}px`; 
+//     divElement.style.height = `${offsetWidth + 20}px`;
+//     return;
+//   }
+//     divElement.style.width = `${offsetWidth - 20}px`; 
+//     divElement.style.height = `${offsetWidth - 20}px`;
+// }
+
+// btnIncrease.addEventListener('click', onClick)
+// btnDecrease.addEventListener('click', onClick)
 //TODO:=========task-05=================
 // При кліку на коло воно має слідувати за курсором. При повторному кліку воно стає в початкове положення.
