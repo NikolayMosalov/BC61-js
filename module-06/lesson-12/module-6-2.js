@@ -79,6 +79,21 @@ const refs = {
 //TODO:=========task-02=================
 // Кнопка "Приховати" ховає текст і замінює назву кнопки на "Розкрити", у разі повторного натискання текст знову стає доступним і кнопка набуває початкового вигляду.
 
+// const buttonElem = document.querySelector('.js-password-button');
+// const inputElem = document.querySelector(".js-password-input");
+
+// buttonElem.addEventListener("click", () => {
+//   if( inputElem.type === "text"){
+//     inputElem.type = "password";
+//     buttonElem.textContent = "Розкрити";
+//   } else {
+//     inputElem.type = "text";
+//     buttonElem.textContent = "Приховати";
+//   }
+
+// });
+
+
 //TODO:=========task-03=================
 // Написати функцію, яка буде створювати список подій клавіатури event.key та event.code
 // Додати класи на список eventList, на елементи eventCode та eventKey
