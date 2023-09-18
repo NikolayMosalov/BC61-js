@@ -16,13 +16,38 @@
  */
 
 // find refs
+const refs = {
+    userInput: document.querySelector('.js-username-input'),
+    form: document.querySelector('.js-contact-form'),
+
+
+
+}
+// console.log(refs.userInput);
 
 //TODO:===========1===============
-
+//  refs.userInput.addEventListener('input',() => {
+//     console.log(refs.userInput);
+//     if(refs.userInput.value.length > 6) {
+//         refs.userInput.classList.add('success');
+//         refs.userInput.classList.remove('error');
+        
+//     } else {
+//         refs.userInput.classList.remove('success');
+//         refs.userInput.classList.add('error');
+//     }
+//  } );
 //TODO:===========2===============
-
+// refs.userInput.addEventListener('focus', () => {
+//     !refs.userInput.value ?  refs.userInput.style.outline = '3px solid red' : refs.userInput.style.outline = '3px solid green';
+// })
 //TODO:===========3===============
 
+// const onBlur = () => {
+//     !refs.userInput.value ?  refs.userInput.style.outline = '3px solid red' : refs.userInput.style.outline = '3px solid lime';
+//     console.log(123);
+// }
+// refs.userInput.addEventListener('blur', onBlur)
 //TODO:===========4===============
 
 //TODO:=========task-02=================
