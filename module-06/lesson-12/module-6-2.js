@@ -17,12 +17,10 @@
 
 // find refs
 const refs = {
-    userInput: document.querySelector('.js-username-input'),
-    form: document.querySelector('.js-contact-form'),
-
-
-
-}
+  userInput: document.querySelector(".js-username-input"),
+  form: document.querySelector(".js-contact-form"),
+  span: document.querySelector(".js-username-output"),
+};
 // console.log(refs.userInput);
 
 //TODO:===========1===============
@@ -31,7 +29,7 @@ const refs = {
 //     if(refs.userInput.value.length > 6) {
 //         refs.userInput.classList.add('success');
 //         refs.userInput.classList.remove('error');
-        
+
 //     } else {
 //         refs.userInput.classList.remove('success');
 //         refs.userInput.classList.add('error');
@@ -39,16 +37,44 @@ const refs = {
 //  } );
 //TODO:===========2===============
 // refs.userInput.addEventListener('focus', () => {
-//     !refs.userInput.value ?  refs.userInput.style.outline = '3px solid red' : refs.userInput.style.outline = '3px solid green';
+//     !refs.userInput.value.trim() ?  refs.userInput.style.outline = '3px solid red' : refs.userInput.style.outline = '3px solid green';
 // })
 //TODO:===========3===============
 
 // const onBlur = () => {
-//     !refs.userInput.value ?  refs.userInput.style.outline = '3px solid red' : refs.userInput.style.outline = '3px solid lime';
+//     !refs.userInput.value.trim() ?  refs.userInput.style.outline = '3px solid red' : refs.userInput.style.outline = '3px solid lime';
 //     console.log(123);
 // }
 // refs.userInput.addEventListener('blur', onBlur)
 //TODO:===========4===============
+
+// const OnSubmit = (e) => {
+//   e.preventDefault();
+
+//   const { accept, userName } = e.target.elements;
+
+//   if (!userName.value.trim() || !accept.checked) {
+//     return alert("invalid arguments");
+//   }
+
+//   const userData = {
+//     userName: userName.value,
+//   };
+//   console.log(userData);
+
+//   //   e.currentTarget.reset();
+//   refs.form.reset();
+
+//   refs.span.textContent = "Anonymous";
+// };
+
+// const OnInputChange = () => {
+
+//   refs.span.textContent = refs.userInput.value || "Anonymous";
+// };
+
+// refs.form.addEventListener("input", OnInputChange);
+// refs.form.addEventListener("submit", OnSubmit);
 
 //TODO:=========task-02=================
 // Кнопка "Приховати" ховає текст і замінює назву кнопки на "Розкрити", у разі повторного натискання текст знову стає доступним і кнопка набуває початкового вигляду.
@@ -62,4 +88,3 @@ const refs = {
 
 //TODO:=========task-05=================
 // При кліку на коло воно має слідувати за курсором. При повторному кліку воно стає в початкове положення.
-
