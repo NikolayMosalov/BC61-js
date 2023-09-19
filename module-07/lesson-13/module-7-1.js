@@ -7,11 +7,15 @@
  * розкритий текст приховується.Нажимаючи на інші елементи меню, попередньо відкриті елементи не закриваються.
  */
 
-// const listEl = document.querySelector('.js-accordion-list');
+const listEl = document.querySelector('.js-accordion-list');
 
-// function onBtnClick(event) {}
+function onBtnClick(event) {
+    const btn = event.target;
+    if(btn.nodeName !== 'BUTTON') return;
+    btn.nextElementSibling.classList.toggle('active');   
+}
 
-// listEl.addEventListener('click', onBtnClick);
+listEl.addEventListener('click', onBtnClick);
 
 //TODO:=========task-02=======Pagination==========
 /**
