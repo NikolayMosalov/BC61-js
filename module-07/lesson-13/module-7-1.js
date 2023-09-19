@@ -24,3 +24,28 @@ listEl.addEventListener('click', onBtnClick);
  * Функція`handleClick`повинна викликатися коли відбувається клік на елементі`pagination`.
  */
 
+const ulElem = document.querySelector('.js-pagination');
+
+ulElem.addEventListener('click', (e) => {
+    if (e.target.nodeName !== "LI") return;
+
+    const clickedElem = e.target;
+    const activeElem = ulElem.querySelector('.active');
+
+    if (clickedElem.dataset.type === "page") {
+        activeElem.classList.remove('active');
+        clickedElem.classList.add('active');
+        return;
+    }
+
+    if (clickedElem.dataset.type === "prev" && activeElem.previousElementSibling.dataset.type === "page") {
+        activeElem.classList.remove('active');
+        activeElem.previousElementSibling.classList.add('active');
+        return;
+    }
+
+    if (clickedElem.dataset.type === "next" && activeElem.nextElementSibling.dataset.type === "page") {
+        activeElem.classList.remove('active');
+        activeElem.nextElementSibling.classList.add('active');
+    }
+});
