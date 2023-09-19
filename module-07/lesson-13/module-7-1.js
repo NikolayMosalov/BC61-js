@@ -24,6 +24,7 @@ listEl.addEventListener('click', onBtnClick);
  * Функція`handleClick`повинна викликатися коли відбувається клік на елементі`pagination`.
  */
 
+
 const ulElem = document.querySelector('.js-pagination');
 
 ulElem.addEventListener('click', (e) => {
