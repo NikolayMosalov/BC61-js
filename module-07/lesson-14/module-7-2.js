@@ -11,7 +11,82 @@
   |  - Створи 3 функції onOpenModalBtnElClick, closeModalWindow, onEscClick. Не забувай робити перевірку на цільовий елемент. 
   |  - Відображення модельного вікна реалізуй заа допомогою бібліотеки basicLightbox і його метода "basicLightbox.create".
   |============================
+  
 */
+
+const openBtnEl = document.querySelector('.js-modal-open');
+
+
+openBtnEl.addEventListener('click', onOpenModal);
+
+
+ const modal = basicLightbox.create(`
+	<div class="modal">
+  <button type="button" class="close-btn js-modal-close">
+    X
+  </button>
+
+  <form class="login-form js-modal__form">
+    <label>
+      Name
+      <input type="text" name="name" placeholder="enter your name" />
+    </label>
+    <label>
+      Email
+      <input type="email" name="email" placeholder="enter your email" />
+    </label>
+    <label>
+      Password
+      <input
+        type="password"
+        name="password"
+        placeholder="enter your password"
+      />
+    </label>
+    <button class="login-btn" type="submit">
+      Login
+    </button>
+  </form>
+</div>`, 
+   {
+     onShow: () => {
+       document.addEventListener('keydown', onEscClick);
+       document.body.style.overflow = "hidden"
+     },
+     onClose: () => {
+       document.removeEventListener('keydown', onEscClick);
+       document.body.style.overflow = "visible"
+     }
+     
+   }
+   
+)
+  
+
+
+function onOpenModal(e) {
+  
+  modal.show();
+  const closeBtn = document.querySelector('.js-modal-close');
+
+  // document.addEventListener('keydown', onEscClick);
+  closeBtn.addEventListener('click', closeModal)
+}
+
+function onEscClick(e) {
+
+  if (e.code !== 'Escape') return;
+  
+  // document.removeEventListener('keydown', onEscClick)
+  closeModal();
+
+}
+
+
+function closeModal() {
+  modal.close();
+}
+
 
 /**
   |============Розмітка для модального вікна================
