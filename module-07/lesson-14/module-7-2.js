@@ -156,3 +156,9 @@ function onSubmit(e) {
     alert("Thanks for your registration!");
   }, 1000);
 }
+// const inputEl = document.querySelector('.js-user-input')
+// inputEl.addEventListener('input', _.debounce(onInput, 2000))
+// function onInput(evt){
+//   console.log(evt.target.value);
+  
+// }
