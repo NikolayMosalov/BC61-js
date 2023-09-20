@@ -14,13 +14,12 @@
   
 */
 
-const openBtnEl = document.querySelector('.js-modal-open');
+const openBtnEl = document.querySelector(".js-modal-open");
 
+openBtnEl.addEventListener("click", onOpenModal);
 
-openBtnEl.addEventListener('click', onOpenModal);
-
-
- const modal = basicLightbox.create(`
+const modal = basicLightbox.create(
+  `
 	<div class="modal">
   <button type="button" class="close-btn js-modal-close">
     X
@@ -47,46 +46,40 @@ openBtnEl.addEventListener('click', onOpenModal);
       Login
     </button>
   </form>
-</div>`, 
-   {
-     onShow: () => {
-       document.addEventListener('keydown', onEscClick);
-       document.body.style.overflow = "hidden"
-     },
-     onClose: () => {
-       document.removeEventListener('keydown', onEscClick);
-       document.body.style.overflow = "visible"
-     }
-     
-   }
-   
-)
-  
-
+</div>`,
+  {
+    onShow: () => {
+      document.addEventListener("keydown", onEscClick);
+      document.body.style.overflow = "hidden";
+    },
+    onClose: () => {
+      document.removeEventListener("keydown", onEscClick);
+      document.body.style.overflow = "visible";
+    },
+  }
+);
 
 function onOpenModal(e) {
-  
   modal.show();
-  const closeBtn = document.querySelector('.js-modal-close');
+  const closeBtn = document.querySelector(".js-modal-close");
+  const formEl = document.querySelector(".js-modal__form");
 
   // document.addEventListener('keydown', onEscClick);
-  closeBtn.addEventListener('click', closeModal)
+
+  formEl.addEventListener("submit", onSubmit);
+  closeBtn.addEventListener("click", closeModal);
 }
 
 function onEscClick(e) {
+  if (e.code !== "Escape") return;
 
-  if (e.code !== 'Escape') return;
-  
   // document.removeEventListener('keydown', onEscClick)
   closeModal();
-
 }
-
 
 function closeModal() {
   modal.close();
 }
-
 
 /**
   |============Розмітка для модального вікна================
@@ -135,3 +128,31 @@ function closeModal() {
   |  - Після отправки почисти форму і реалізуй автоматичне закриття модального вікна
   |============================
 */
+
+function onSubmit(e) {
+  e.preventDefault();
+
+  const {
+    elements: { name, email, password },
+  } = e.currentTarget;
+
+  if (!email.value.trim() || !password.value.trim()) {
+    return alert("email or password is empty");
+  }
+
+  const userData = {
+    name: name.value || "Anonimus",
+    email: email.value,
+    password: password.value,
+  };
+
+  console.log(userData);
+
+  e.currentTarget.reset();
+
+  closeModal();
+
+  setTimeout(() => {
+    alert("Thanks for your registration!");
+  }, 1000);
+}
