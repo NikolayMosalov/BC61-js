@@ -194,29 +194,23 @@ function showMessage() {
 
 // html
 //  <li>
-//     <div class="countryFlag">
+//     <div class="countryFlag"></div>
 //     <p class="countryName">Ukraine 🇺🇦</p>
 // </li>;
 
 // - Якщо результат запиту - це масив з однією країною, в інтерфейсі відображається розмітка картки з даними про країну: прапор, назва, столиця, населення.
 // html
-// <li>
-//     <div class="previewCard">
-//         <div class="countryFlag">
-//         <p class="countryName">Ukraine 🇺🇦</p>
-//     </div>
-//     <p class="countryCapital"><b>Capital </b> Kyiv</p>
-//     <p class="countryPopulation"><b>Population: </b>41 342 765</p>
-//     <p class="countryArea"><b>Area: </b>603.628</p>
-// </li>
+{/* <li>
+    <div class="previewCard">
+        <div class="countryFlag">
+        <p class="countryName">Ukraine 🇺🇦</p>
+    </div>
+    <p class="countryCapital"><b>Capital </b> Kyiv</p>
+    <p class="countryPopulation"><b>Population: </b>41 342 765</p>
+    <p class="countryArea"><b>Area: </b>603.628</p>
+</li> */}
 
 // - Якщо країни не було знайдено у масиві, то розмітка списку країн або інформації про країну зникає і показується повідомлення в `errorTextRef` про те що `""Oops, there is no country with that name"${}"`
-
-// function onInputChange() {}
-
-// function createCountryList() {}
-
-// function createCountryCard() {}
 
 const countries = [
   {
@@ -255,6 +249,58 @@ const countries = [
     flag: '🇬🇮',
   },
 ];
+
+const inputEl = document.querySelector('.js-search-input');
+const containerEl = document.querySelector('.js-country-list');
+const errorEl = document.querySelector('.js-output-error');
+
+inputEl.addEventListener('input', _.debounce(onInputChange, 300));
+
+function onInputChange(e) {
+  const { value } = e.target;
+
+  if (!value.trim()) {
+    return containerEl.innerHTML = '';
+  }
+  const filtresCountry = countries.filter(({ name }) => name.toLocaleLowerCase().includes(value.toLocaleLowerCase().trim()));
+
+  if (filtresCountry.length === 0) {
+    containerEl.innerHTML = '';
+    errorEl.textContent = `Oops, there is no country with name ${value}.`
+    return 
+  }
+
+  filtresCountry.length === 1 ? createCountryCard(filtresCountry[0]) : createCountryList(filtresCountry);
+
+}
+
+function createCountryList(arr) {
+  const markup = arr.map(({ flag, name }) => {
+    return `<li>
+    <div class="countryFlag">${flag}</div>
+    <p class="countryName">${name}</p>
+</li>`
+  }).join('');
+  errorEl.textContent = '';
+  containerEl.innerHTML = markup;
+}
+
+function createCountryCard(obj) {
+  const {name, flag, capital, population, area } = obj;
+  const markup = `<li>
+    <div class="previewCard">
+        <div class="countryFlag"></div>
+        <p class="countryName">${name} ${flag}</p>
+    </div>
+    <p class="countryCapital"><b>Capital </b> ${capital}</p>
+    <p class="countryPopulation"><b>Population: </b>${population}</p>
+    <p class="countryArea"><b>Area: </b>${area}</p>
+</li>`
+  errorEl.textContent = '';
+  containerEl.innerHTML = markup;
+}
+
+
 
 //   `<li>
 //     <div class="previewCard">
