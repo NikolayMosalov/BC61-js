@@ -98,6 +98,87 @@ function createMarkup(e) {
   |============================
 */
 
+
+const formElem = document.querySelector('.js-todos__form');
+const listElem = document.querySelector('.js-todos-list');
+const pElem = document.querySelector('.js-text');
+let items = [];
+
+formElem.addEventListener('submit', onClickSubmit);
+
+listElem.addEventListener('click', onBtnClick);
+
+document.addEventListener('DOMContentLoaded', showMessage);
+
+function onBtnClick(e) {
+  if(e.target.nodeName !== 'BUTTON') return;
+
+  const todoId = Number.parseInt(e.target.dataset.id);
+  items = items.filter(item => item.id !== todoId)
+
+  const updateList = items.map(item => createTodo(item));
+  listElem.innerHTML = updateList.join('');
+  showMessage();
+}
+
+function onClickSubmit(e) {
+  e.preventDefault();
+
+  const input = e.currentTarget.elements['user-todos'];
+  const todos = input.value.trim();
+
+  if(!todos) {
+    return alert('Input is empty');
+  }
+  const isExist = items.some(item => item.text === todos);
+  
+  if(isExist) {
+    return alert('Task is exist');
+  }
+  
+  const todoItem = {
+    id: Date.now(),
+    text: todos
+  }
+  items.push(todoItem);
+  input.value = '';
+
+  // renderPage();
+  listElem.insertAdjacentHTML('beforeend', createTodo(todoItem));
+  showMessage();
+}
+
+// function renderPage() {
+//   const markup = items.map(({ id, text }) => {
+//     return `
+//       <li class="todos-item">
+//       <span class="text">${text}</span>
+//       <div>
+//         <button type="button" data-id="${id}" class="todos-btn-delete">Видалити</button>
+//       </div>
+//       </li>
+//     `;
+//   }).join('')
+
+//   listElem.innerHTML = markup;
+// }
+
+function createTodo({id, text}) {
+  return `
+      <li class="todos-item">
+      <span class="text">${text}</span>
+      <div>
+        <button type="button" data-id="${id}" class="todos-btn-delete">Видалити</button>
+      </div>
+      </li>
+    `;
+}
+
+function showMessage() {
+  items.length === 0 ? pElem.classList.remove('is-hidden') : pElem.classList.add('is-hidden');
+}
+
+
 //TODO:====================task-03================Find country=====================
 
 // - Використовуй html з файлу [index.html].
