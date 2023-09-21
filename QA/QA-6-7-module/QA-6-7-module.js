@@ -29,6 +29,12 @@ const films = [
   },
 ];
 
+const listEl = document.querySelector('.js-film-list')
+
+document.addEventListener('DOMContentLoaded', createMarkup);
+
+
+
 // Приклад елементу списку
 {
   /* <li id="${id}">
@@ -37,9 +43,39 @@ const films = [
 </li> */
 }
 
-// const watchedFilms = ['film_2', 'film_4', 'film_5'];
+const watchedFilms = ['film_2', 'film_4', 'film_5'];
 
-// function createMarkup() {}
+
+function createMarkup(e) {
+
+  const markup = films.map(({ title, imgUrl, id }) => {
+    return `
+    <li id="${id}">
+     <img src="${imgUrl}" alt="${title}" />
+     <p>${title}</p>
+    </li>
+    `
+  })
+    .join('')
+  
+  listEl.insertAdjacentHTML('afterbegin', markup)
+
+  watchedFilms.forEach(id => {
+    const filmEl = listEl.querySelector(`#${id}`)
+
+    if (filmEl) {
+      filmEl.style.opacity = 0.5; 
+    }
+  });
+
+};
+
+// createMarkup(films);
+
+
+
+
+
 
 //TODO:====================task-02================TODOS=====================
 /**
