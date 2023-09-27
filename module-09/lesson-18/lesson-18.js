@@ -8,7 +8,15 @@
 //   return 'hello world';
 // }
 
+// function greet() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve('hello world');
+//         }, 2000)
+//     })
+// }
 
+// greet().then(console.log).catch(console.log)
 
 //TODO:====================02==========================
 /**
