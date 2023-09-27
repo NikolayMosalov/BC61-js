@@ -99,7 +99,27 @@
  * logCount повинна логувати кількість викликів
  */
 
-// countWithDelay(3000, 5, 1000);
+function countWithDelay(delay, times, interval){
+    let count = 0;
+
+    function logCount(){
+        count +=1;
+
+        if(count === times) return;
+
+        setTimeout(logCount, interval);
+        console.log(count);
+    }
+    createPromise(delay, logCount);
+}
+
+function createPromise(delay, callback){
+    return new Promise(resolve => {
+        setTimeout(() => resolve(), delay);
+    }).then(() => callback());
+}
+
+countWithDelay(1000, 5, 3000);
 
 //TODO:====================04==========================
 /**
