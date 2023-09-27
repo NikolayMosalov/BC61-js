@@ -99,27 +99,27 @@
  * logCount повинна логувати кількість викликів
  */
 
-function countWithDelay(delay, times, interval){
-    let count = 0;
+// function countWithDelay(delay, times, interval){
+//     let count = 0;
 
-    function logCount(){
-        count +=1;
+//     function logCount(){
+//         count +=1;
 
-        if(count === times) return;
+//         if(count === times) return;
 
-        setTimeout(logCount, interval);
-        console.log(count);
-    }
-    createPromise(delay, logCount);
-}
+//         setTimeout(logCount, interval);
+//         console.log(count);
+//     }
+//     createPromise(delay, logCount);
+// }
 
-function createPromise(delay, callback){
-    return new Promise(resolve => {
-        setTimeout(() => resolve(), delay);
-    }).then(() => callback());
-}
+// function createPromise(delay, callback){
+//     return new Promise(resolve => {
+//         setTimeout(() => resolve(), delay);
+//     }).then(() => callback());
+// }
 
-countWithDelay(1000, 5, 3000);
+// countWithDelay(1000, 5, 3000);
 
 //TODO:====================04==========================
 /**
@@ -130,5 +130,15 @@ countWithDelay(1000, 5, 3000);
  * Якщо значення не парне, вирішуй проміс і повертай "odd" через 2 секунди.
  */
 
-// const value = prompt('Paste value');
-// checkValue(value).then(console.log).catch(console.log);
+const value = prompt("Paste value");
+checkValue(value).then(console.log).catch(console.log);
+
+function checkValue(value) {
+  return new Promise((resolve, reject) => {
+    if (!value || isNaN(value)) {
+      return reject("error");
+    }
+    if (value % 2 === 0) setTimeout(() => resolve("even"), 1000);
+    setTimeout(() => resolve("odd"), 2000);
+  });
+}
