@@ -53,3 +53,35 @@ export function addStudentById(student) {
 }
 
 // addStudentById(student).then(console.log);
+
+// МЕТОД PUT
+
+export function updateStudent(id, data) {
+  return fetch(`${BASE_URL}${END_POINT}/${id}`, {
+    method: "PUT",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify(data),
+  }).then((res) => {
+    if (!res.ok) {
+      throw new Error(res.status);
+    }
+    return res.json();
+  });
+}
+
+// updateStudent(7, { age: 18 }).then(console.log);
+
+// МЕТОД DELETE
+
+export function deleteStudent(id) {
+  return fetch(`${BASE_URL}${END_POINT}/${id}`, {
+    method: "DELETE",
+  }).then((res) => {
+    if (!res.ok) {
+      throw new Error(res.status);
+    }
+    return res.json();
+  });
+}
+
+// deleteStudent(1).then(console.log);
