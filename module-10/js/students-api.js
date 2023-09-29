@@ -15,12 +15,6 @@ const student = {
   city: "Lviv",
 };
 
-const optionsPost = {
-  method: "POST",
-  headers: { "content-type": "application/json" },
-  body: JSON.stringify(student),
-};
-
 // метод GET
 export function getStudents() {
   return fetch(`${BASE_URL}${END_POINT}`, options).then((res) => {
@@ -46,7 +40,11 @@ getStudentById(1).then(console.log);
 // метод POST
 
 export function addStudentById(student) {
-  return fetch(`${BASE_URL}${END_POINT}`, optionsPost).then((res) => {
+  return fetch(`${BASE_URL}${END_POINT}`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify(student),
+  }).then((res) => {
     if (!res.ok) {
       throw new Error(res.status);
     }
