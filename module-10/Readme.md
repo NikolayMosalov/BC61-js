@@ -72,3 +72,64 @@ const updateData = { firstName: 'Lory' };
 ```
 
 
+# Модуль 10. Заняття 20. HTTP requests
+
+- Оформити інтерфейс
+
+- html - modal
+```
+  `
+    <div class="modal">
+    <form class="student-form">
+      <input name="firstName" placeholder="firstName*" type="text" required />
+      <input name="lastName" placeholder="lastName*" type="text" required />
+      <input name="age" placeholder="Age*" type="text" required />
+      <input name="country" placeholder="Country*" type="text" required />
+      <input name="city" placeholder="City*" type="text" required />
+
+      <button class="add-student-btn">Add Student</button>
+    </form>
+    </div>
+`
+```
+
+- обьект студента
+```
+js
+const student = {
+    firstName: firstName.value,
+    lastName: lastName.value,
+    country: country.value,
+    age: age.value,
+    city: city.value,
+  };
+```
+
+- createStudentCard()
+```
+function createStudentCard(student) {
+
+  return `
+  <li class="photo-card">
+        <img
+          src=""
+          alt="${firstName}"
+        />
+        <button data-id=${id} type="button" class="delete-btn js-delete-btn">&#9988;</button>
+
+        <div class="wrapper">
+          <div class="info" >
+          <b class="student-info">${firstName}</b>
+          <b class="student-info">${lastName}</b>
+          <b class="student-info">${age}</b>
+          </div>
+
+          <div class="info">
+          <b class="student-info">${country}</b>
+          <b class="student-info">${city}</b>
+          </div>
+        </div>
+      </li>
+  `;
+}
+```
