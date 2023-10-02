@@ -2,14 +2,13 @@ import { getStudents, addStudentById, deleteStudent } from "./students-api.js";
 
 const openModalBtnEl = document.querySelector(".js-modal-btn");
 const listEl = document.querySelector(".gallery");
-const loaderEL = document.querySelector('.loader')
+const loaderEL = document.querySelector(".loader");
+const paragraphEl = document.querySelector(".empty-students");
 
-
-document.addEventListener('DOMContentLoaded', onRanderPage);
-
-
+document.addEventListener("DOMContentLoaded", onRanderPage);
 
 openModalBtnEl.addEventListener("click", onModalBtnClick);
+listEl.addEventListener("click", onDeleteStudent);
 
 let items = [];
 const options = {
@@ -49,9 +48,9 @@ function onSubmit(e) {
 
   const { firstName, lastName, age, country, city } = e.currentTarget.elements;
 
- loaderEL.classList.remove('is-hidden')
-
-listEl.classList.add('is-hidden')
+  loaderEL.classList.remove("is-hidden");
+  paragraphEl.classList.add("is-hidden");
+  listEl.classList.add("is-hidden");
 
   const student = {
     firstName: firstName.value,
@@ -62,19 +61,19 @@ listEl.classList.add('is-hidden')
   };
 
   addStudentById(student)
-  .then((res) => {
-    items.push(res);
-    return createStudentCard(res)
-  })
-  .then((res)=>{
-    listEl.insertAdjacentHTML('beforeend', res)
+    .then((res) => {
+      items.push(res);
+      return createStudentCard(res);
+    })
+    .then((res) => {
+      listEl.insertAdjacentHTML("beforeend", res);
 
-    listEl.classList.remove('is-hidden')
-  })
-  .catch(console.log)
-  .finally(()=>{
-    loaderEL.classList.add('is-hidden')
-  });
+      listEl.classList.remove("is-hidden");
+    })
+    .catch(console.log)
+    .finally(() => {
+      loaderEL.classList.add("is-hidden");
+    });
 
   e.currentTarget.reset();
   modal.close();
@@ -111,22 +110,43 @@ function createStudentCard(student) {
     `;
 }
 
-function onRanderPage () {
-  loaderEL.classList.remove('is-hidden')
-  getStudents().then(res =>{
-    items = [...res]
-    randerMarkup(res)
-  })
-  .catch(console.log).
-  finally(()=>{
-    loaderEL.classList.add('is-hidden')
-  })
+function onRanderPage() {
+  loaderEL.classList.remove("is-hidden");
+  getStudents()
+    .then((res) => {
+      items = [...res];
+      randerMarkup(res);
+    })
+    .catch(console.log)
+    .finally(() => {
+      loaderEL.classList.add("is-hidden");
+    });
 }
 
+function randerMarkup(data) {
+  const markup = data.map((student) => createStudentCard(student)).join("");
+  listEl.innerHTML = markup;
 
-function randerMarkup(data){
-const markup = data.map(student => 
-  createStudentCard(student)
-).join('')
-listEl.innerHTML= markup;
+  items.length === 0
+    ? paragraphEl.classList.remove("is-hidden")
+    : paragraphEl.classList.add("is-hidden");
+}
+
+function onDeleteStudent(event) {
+  if (event.target.nodeName !== "BUTTON") return;
+  loaderEL.classList.remove("is-hidden");
+  listEl.classList.add("is-hidden");
+  const index = event.target.dataset.id;
+
+  items = items.filter(({ id }) => id !== index);
+
+  deleteStudent(index)
+    .then(() => {
+      randerMarkup(items);
+      listEl.classList.remove("is-hidden");
+    })
+    .catch(console.log)
+    .finally(() => {
+      loaderEL.classList.add("is-hidden");
+    });
 }
