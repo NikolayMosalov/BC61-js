@@ -2,6 +2,12 @@ import { getStudents, addStudentById, deleteStudent } from "./students-api.js";
 
 const openModalBtnEl = document.querySelector(".js-modal-btn");
 const listEl = document.querySelector(".gallery");
+const loaderEL = document.querySelector('.loader')
+
+
+document.addEventListener('DOMContentLoaded', onRanderPage);
+
+
 
 openModalBtnEl.addEventListener("click", onModalBtnClick);
 
@@ -43,6 +49,10 @@ function onSubmit(e) {
 
   const { firstName, lastName, age, country, city } = e.currentTarget.elements;
 
+ loaderEL.classList.remove('is-hidden')
+
+listEl.classList.add('is-hidden')
+
   const student = {
     firstName: firstName.value,
     lastName: lastName.value,
@@ -53,14 +63,18 @@ function onSubmit(e) {
 
   addStudentById(student)
   .then((res) => {
-    items.push(student);
+    items.push(res);
     return createStudentCard(res)
   })
   .then((res)=>{
     listEl.insertAdjacentHTML('beforeend', res)
 
+    listEl.classList.remove('is-hidden')
   })
-  .catch(console.log);
+  .catch(console.log)
+  .finally(()=>{
+    loaderEL.classList.add('is-hidden')
+  });
 
   e.currentTarget.reset();
   modal.close();
@@ -95,4 +109,24 @@ function createStudentCard(student) {
           </div>
         </li>
     `;
+}
+
+function onRanderPage () {
+  loaderEL.classList.remove('is-hidden')
+  getStudents().then(res =>{
+    items = [...res]
+    randerMarkup(res)
+  })
+  .catch(console.log).
+  finally(()=>{
+    loaderEL.classList.add('is-hidden')
+  })
+}
+
+
+function randerMarkup(data){
+const markup = data.map(student => 
+  createStudentCard(student)
+).join('')
+listEl.innerHTML= markup;
 }
