@@ -7,13 +7,13 @@ const options = {
   },
 };
 
-const student = {
-  firstName: "Sister",
-  lastName: "Miller",
-  country: "Ukraine",
-  age: 35,
-  city: "Lviv",
-};
+// const student = {
+//   firstName: "Sister",
+//   lastName: "Miller",
+//   country: "Ukraine",
+//   age: 35,
+//   city: "Lviv",
+// };
 
 // метод GET
 export function getStudents() {
@@ -25,7 +25,7 @@ export function getStudents() {
   });
 }
 
-getStudents().then(console.log);
+// getStudents().then(console.log);
 
 export function getStudentById(id) {
   return fetch(`${BASE_URL}${END_POINT}/${id}`, options).then((res) => {
@@ -35,7 +35,7 @@ export function getStudentById(id) {
     return res.json();
   });
 }
-getStudentById(1).then(console.log);
+// getStudentById(1).then(console.log);
 
 // метод POST
 
