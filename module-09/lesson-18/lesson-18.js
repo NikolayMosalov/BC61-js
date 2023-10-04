@@ -130,15 +130,15 @@
  * Якщо значення не парне, вирішуй проміс і повертай "odd" через 2 секунди.
  */
 
-const value = prompt("Paste value");
-checkValue(value).then(console.log).catch(console.log);
+// const value = prompt("Paste value");
+// checkValue(value).then(console.log).catch(console.log);
 
-function checkValue(value) {
-  return new Promise((resolve, reject) => {
-    if (!value || isNaN(value)) {
-      return reject("error");
-    }
-    if (value % 2 === 0) setTimeout(() => resolve("even"), 1000);
-    setTimeout(() => resolve("odd"), 2000);
-  });
-}
+// function checkValue(value) {
+//   return new Promise((resolve, reject) => {
+//     if (!value || isNaN(value)) {
+//       return reject("error");
+//     }
+//     if (value % 2 === 0) setTimeout(() => resolve("even"), 1000);
+//     setTimeout(() => resolve("odd"), 2000);
+//   });
+// }
